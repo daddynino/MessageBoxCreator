@@ -55,7 +55,7 @@ Partial Class MessageMain
         ' LblMsgText
         ' 
         LblMsgText.AutoSize = True
-        LblMsgText.Location = New Point(30, 29)
+        LblMsgText.Location = New Point(21, 31)
         LblMsgText.Name = "LblMsgText"
         LblMsgText.Size = New Size(65, 15)
         LblMsgText.TabIndex = 10
@@ -64,7 +64,7 @@ Partial Class MessageMain
         ' LblCaption
         ' 
         LblCaption.AutoSize = True
-        LblCaption.Location = New Point(30, 106)
+        LblCaption.Location = New Point(21, 108)
         LblCaption.Name = "LblCaption"
         LblCaption.Size = New Size(49, 15)
         LblCaption.TabIndex = 11
@@ -73,7 +73,7 @@ Partial Class MessageMain
         ' LblDefault
         ' 
         LblDefault.AutoSize = True
-        LblDefault.Location = New Point(30, 182)
+        LblDefault.Location = New Point(21, 184)
         LblDefault.Name = "LblDefault"
         LblDefault.Size = New Size(45, 15)
         LblDefault.TabIndex = 13
@@ -82,7 +82,7 @@ Partial Class MessageMain
         ' LblButtonType
         ' 
         LblButtonType.AutoSize = True
-        LblButtonType.Location = New Point(30, 138)
+        LblButtonType.Location = New Point(21, 140)
         LblButtonType.Name = "LblButtonType"
         LblButtonType.Size = New Size(48, 15)
         LblButtonType.TabIndex = 15
@@ -115,7 +115,7 @@ Partial Class MessageMain
         ' LblIcon
         ' 
         LblIcon.AutoSize = True
-        LblIcon.Location = New Point(30, 218)
+        LblIcon.Location = New Point(21, 220)
         LblIcon.Name = "LblIcon"
         LblIcon.Size = New Size(30, 15)
         LblIcon.TabIndex = 21
@@ -168,7 +168,7 @@ Partial Class MessageMain
         ' LblOptions
         ' 
         LblOptions.AutoSize = True
-        LblOptions.Location = New Point(30, 252)
+        LblOptions.Location = New Point(21, 254)
         LblOptions.Name = "LblOptions"
         LblOptions.Size = New Size(49, 15)
         LblOptions.TabIndex = 27
@@ -212,7 +212,7 @@ Partial Class MessageMain
         ' Label1
         ' 
         Label1.AutoSize = True
-        Label1.Location = New Point(30, 289)
+        Label1.Location = New Point(21, 291)
         Label1.Name = "Label1"
         Label1.Size = New Size(83, 15)
         Label1.TabIndex = 34
