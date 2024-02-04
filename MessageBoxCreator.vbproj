@@ -12,6 +12,10 @@
     <Product>Message Box Creator</Product>
     <Description>GUI to pick messagebox options, generates code to copy into your app.</Description>
     <Copyright>© 2024 Neil Saunders</Copyright>
+    <PackageProjectUrl>https://github.com/daddynino/MessageBoxCreator</PackageProjectUrl>
+    <RepositoryUrl>https://github.com/daddynino/MessageBoxCreator</RepositoryUrl>
+    <RepositoryType>git</RepositoryType>
+    <PackageReleaseNotes></PackageReleaseNotes>
   </PropertyGroup>
 
   <ItemGroup>
