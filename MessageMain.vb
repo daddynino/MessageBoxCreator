@@ -378,6 +378,10 @@ Public Class MessageMain
 
 
     End Sub
+
+    Private Sub Button1_Click(sender As Object, e As EventArgs) Handles Button1.Click
+        About.Show()
+    End Sub
 End Class
 Public Class Item
     'Public Property ID As Integer
