@@ -43,7 +43,7 @@ Partial Class MessageMain
         BtnCopy = New Button()
         Label1 = New Label()
         TxtVariable = New TextBox()
-        Button1 = New Button()
+        BtnAbout = New Button()
         SuspendLayout()
         ' 
         ' TxtCaption
@@ -255,17 +255,17 @@ Partial Class MessageMain
         TxtVariable.Size = New Size(340, 29)
         TxtVariable.TabIndex = 8
         ' 
-        ' Button1
+        ' BtnAbout
         ' 
-        Button1.FlatAppearance.BorderSize = 0
-        Button1.FlatStyle = FlatStyle.Flat
-        Button1.Location = New Point(27, 574)
-        Button1.Margin = New Padding(4)
-        Button1.Name = "Button1"
-        Button1.Size = New Size(75, 32)
-        Button1.TabIndex = 35
-        Button1.Text = "&About"
-        Button1.UseVisualStyleBackColor = True
+        BtnAbout.FlatAppearance.BorderSize = 0
+        BtnAbout.FlatStyle = FlatStyle.Flat
+        BtnAbout.Location = New Point(27, 574)
+        BtnAbout.Margin = New Padding(4)
+        BtnAbout.Name = "BtnAbout"
+        BtnAbout.Size = New Size(75, 32)
+        BtnAbout.TabIndex = 35
+        BtnAbout.Text = "&About"
+        BtnAbout.UseVisualStyleBackColor = True
         ' 
         ' MessageMain
         ' 
@@ -273,7 +273,7 @@ Partial Class MessageMain
         AutoScaleMode = AutoScaleMode.Font
         BackgroundImageLayout = ImageLayout.None
         ClientSize = New Size(998, 620)
-        Controls.Add(Button1)
+        Controls.Add(BtnAbout)
         Controls.Add(Label1)
         Controls.Add(TxtVariable)
         Controls.Add(BtnCopy)
@@ -323,6 +323,6 @@ Partial Class MessageMain
     Friend WithEvents BtnCopy As Button
     Friend WithEvents Label1 As Label
     Friend WithEvents TxtVariable As TextBox
-    Friend WithEvents Button1 As Button
+    Friend WithEvents BtnAbout As Button
 
 End Class

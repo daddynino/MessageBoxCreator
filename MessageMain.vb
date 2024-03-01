@@ -386,7 +386,28 @@ Public Class MessageMain
 
     End Sub
 
-    Private Sub Button1_Click(sender As Object, e As EventArgs) Handles Button1.Click
+    'Private Sub Button1_Click(sender As Object, e As EventArgs) Handles BtnAbout.Click
+    '    About.Show()
+    'End Sub
+
+    Private Sub LockItems(ValidText As Boolean)
+
+        'If ValidText Then
+        Me.TxtCaption.Enabled = ValidText
+        Me.CboButtons.Enabled = ValidText
+        Me.ButtonChoice1.Enabled = ValidText
+        Me.ButtonChoice2.Enabled = ValidText
+        Me.ButtonChoice3.Enabled = ValidText
+        Me.CboIconSelection.Enabled = ValidText
+        Me.TxtVariable.Enabled = ValidText
+        Me.BtnGenerate.Enabled = ValidText
+        Me.RTBResult.Enabled = ValidText
+        Me.BtnCopy.Enabled = ValidText
+        Me.TxtVariable.Enabled = ValidText
+        'End If
+    End Sub
+
+    Private Sub BtnAbout_Click(sender As Object, e As EventArgs) Handles BtnAbout.Click
         About.Show()
     End Sub
 End Class
