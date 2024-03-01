@@ -1,12 +1,8 @@
-﻿'Imports System.Threading.Channels
-'Imports System.Windows.Forms.VisualStyles.VisualStyleElement
-'Imports Microsoft.VisualBasic.Devices
-
-Public Class MessageMain
-    Dim ButtonSelection As String 'System.Windows.Forms.MessageBoxButtons = Nothing
+﻿Public Class MessageMain
+    Dim ButtonSelection As String
     Dim ButtonDefault As Integer
-    Dim IconSelection As String 'System.Windows.Forms.MessageBoxIcon = Nothing
-    Dim OptionSelection As String 'System.Windows.Forms.MessageBoxOptions = Nothing
+    Dim IconSelection As String
+    Dim OptionSelection As String
 
     Private tooltips As New ToolTip()
 
@@ -58,7 +54,6 @@ Public Class MessageMain
             New Item("Warning")
         }
 
-
         ' Set the ComboBox DataSource to the list of items
         CboIconSelection.DataSource = items
 
@@ -73,8 +68,7 @@ Public Class MessageMain
     End Sub
 
     Private Sub CboButtons_SelectedIndexChanged(sender As Object, e As EventArgs) Handles CboButtons.SelectedIndexChanged
-        'MsgBox("selected index Is:" & CboButtons.SelectedIndex.ToString)
-        'MsgBox("selected item is: " & CboButtons.SelectedIndex.ToString)
+
         Select Case CInt(CboButtons.SelectedIndex.ToString)
             Case 0
                 ButtonSelection = "MessageBoxButtons.AbortRetryIgnore"
@@ -101,7 +95,6 @@ Public Class MessageMain
                 ButtonChoice1.Visible = True
                 ButtonChoice2.Visible = False
                 ButtonChoice3.Visible = False
-
 
             Case 3
                 ButtonSelection = "MessageBoxButtons.OKCancel"
@@ -229,22 +222,6 @@ Public Class MessageMain
         Application.Exit()
     End Sub
 
-    'Private Sub CboOptions_SelectedIndexChanged(sender As Object, e As EventArgs)
-    '    Select Case CboOptions.SelectedIndex.ToString
-    '        Case 0
-    '            OptionSelection = Nothing
-    '        Case 1
-    '            OptionSelection = "System.Windows.Forms.MessageBoxOptions.DefaultDesktopOnly"
-    '        Case 2
-    '            OptionSelection = "System.Windows.Forms.MessageBoxOptions.RightAlign"
-    '        Case 3
-    '            OptionSelection = "System.Windows.Forms.MessageBoxOptions.RtlReading"
-    '        Case 4
-    '            OptionSelection = "System.Windows.Forms.MessageBoxOptions.ServiceNotification"
-    '        Case Else
-    '            OptionSelection = Nothing
-    '    End Select
-    'End Sub
 
     Sub SetTooltips()
         ' Clear existing tooltips
@@ -257,7 +234,6 @@ Public Class MessageMain
         tooltips.SetToolTip(ButtonChoice2, "Select to make this the default button")
         tooltips.SetToolTip(ButtonChoice3, "Select to make this the default button")
         tooltips.SetToolTip(CboIconSelection, "Choose which icon to display")
-        'tooltips.SetToolTip(CboOptions, "Choose which option to use. Default is none")
         tooltips.SetToolTip(TxtVariable, "Save user response to this varible")
         tooltips.SetToolTip(BtnAbout, "Open the application About form")
         tooltips.SetToolTip(BtnExit, "Exit the app")
@@ -266,79 +242,62 @@ Public Class MessageMain
     Private Sub BtnGenerate_Click(sender As Object, e As EventArgs)
         Generate()
     End Sub
+
     Sub Generate()
         Dim strResults As String = String.Empty
         RTBResult.Text = String.Empty
         If String.IsNullOrWhiteSpace(RichTextBox1.Text) Then
-            RTBResult.Text = "" 'String.Empty
+            RTBResult.Text = ""
             Exit Sub
         End If
-        'sanity check
-        'If Len(RichTextBox1.Text) = 0 Then
-        '    'MsgBox("No text to display", vbOK, "Blank entry?")
-        '    MessageBox.Show("No dialog text to display", "Error", MessageBoxButtons.OK, MessageBoxIcon.Asterisk, MessageBoxDefaultButton.Button1)
-        '    Exit Sub
-        'End If
+
 
         If Len(TxtVariable.Text) > 0 Then ' use as variable
-            strResults = "Dim " & TxtVariable.Text & " As DialogResult = " 'System.Windows.Forms.MessageBox.Show("
+            strResults = "Dim " & TxtVariable.Text & " As DialogResult = "
         End If
 
-        strResults &= "MessageBox.Show(" 'System.Windows.Forms.
-        'strResults = strResults & "owner:me,"
+        strResults &= "MessageBox.Show("
         strResults = strResults & """" & RichTextBox1.Text & ""","
         strResults = strResults & """" & TxtCaption.Text & ""","
 
-        strResults = strResults & " " & ButtonSelection & "," 'System.Windows.Forms.
+        strResults = strResults & " " & ButtonSelection & ","
 
+        strResults = strResults & " " & IconSelection & ","
 
-        strResults = strResults & " " & IconSelection & "," 'System.Windows.Forms.
-        'End If
 
         If ButtonChoice1.FlatStyle = FlatStyle.Flat Then
-            strResults &= "MessageBoxDefaultButton.Button1" 'System.Windows.Forms.
+            strResults &= "MessageBoxDefaultButton.Button1"
         End If
 
         If ButtonChoice2.FlatStyle = FlatStyle.Flat Then
-            strResults &= "MessageBoxDefaultButton.Button2" 'System.Windows.Forms.
+            strResults &= "MessageBoxDefaultButton.Button2"
         End If
 
         If ButtonChoice3.FlatStyle = FlatStyle.Flat Then
-            strResults &= "MessageBoxDefaultButton.Button3" 'System.Windows.Forms.
+            strResults &= "MessageBoxDefaultButton.Button3"
         End If
 
         strResults &= ")"
 
-        'If Len(OptionSelection) > 0 Then
-        '    strResults = strResults & " " & OptionSelection ' & ","
-        'Else
-        '    strResults = strResults & " MessageBoxOptions.DefaultDesktopOnly" 'System.Windows.Forms.
-        'End If
-
-        'strResults = strResults & "helpFilePath:="""","
-        'strResults = strResults & "keyword:=""PickSomething"""
-
         RTBResult.Text = strResults
 
-
-        'strResults = strResults & "icon:=" Then
-        'end if
     End Sub
+
     Shared Function ButtonConvert(Selection As Integer) As String
         'Dim strReturn As String = String.Empty
-        'OK  0   
+        'OK  0
         'The Message box contains an OK button.
 
-        'OKCancel    1   
+        'OKCancel    1
         'The Message box contains OK And Cancel buttons.
 
-        'RetryCancel 5   
+        'RetryCancel 5
         'The Message box contains Retry And Cancel buttons.
 
-        'YesNo   4   
+        'YesNo   4
         'The Message box contains Yes And No buttons.
 
-        'YesNoCancel 3   
+        'YesNoCancel 3
         'The Message box contains Yes, No, And Cancel buttons.
 
         Select Case Selection
@@ -368,12 +327,7 @@ Public Class MessageMain
             Clipboard.SetText(RTBResult.Text)
         End If
 
-
     End Sub
-
-    'Private Sub Button1_Click(sender As Object, e As EventArgs) Handles BtnAbout.Click
-    '    About.Show()
-    'End Sub
 
     Private Sub LockItems(ValidText As Boolean)
         ' Enable or disable controls based on the ValidText value
@@ -384,21 +338,10 @@ Public Class MessageMain
         Me.ButtonChoice3.Enabled = ValidText
         Me.CboIconSelection.Enabled = ValidText
         Me.TxtVariable.Enabled = ValidText
-        ' Removed duplicate line for TxtVariable
         Me.BtnCopy.Enabled = ValidText
         Me.RTBResult.Enabled = ValidText
-        Exit Sub
-        ' Special handling for RTBResult
-        If Not ValidText Then
-            ' If ValidText is False, clear RTBResult and disable it
-            Me.RTBResult.Text = ""
-            Me.RTBResult.Enabled = False
-        Else
-            ' Otherwise, enable or disable RTBResult based on ValidText
-            Me.RTBResult.Enabled = ValidText
-        End If
-    End Sub
 
+    End Sub
 
     Private Sub BtnAbout_Click(sender As Object, e As EventArgs) Handles BtnAbout.Click
         About.Show()
@@ -417,8 +360,11 @@ Public Class MessageMain
     Private Sub TxtVariable_TextChanged(sender As Object, e As EventArgs) Handles TxtVariable.TextChanged
         Generate()
     End Sub
+
 End Class
+
 Public Class Item
+
     'Public Property ID As Integer
     Public Property Name As String
 
@@ -427,6 +373,5 @@ Public Class Item
         'Me.ID = Id
         Me.Name = name
     End Sub
-
 
 End Class

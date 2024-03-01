@@ -41,6 +41,7 @@ Partial Class MessageMain
         Label1 = New Label()
         TxtVariable = New TextBox()
         BtnAbout = New Button()
+        LblOptional = New Label()
         SuspendLayout()
         ' 
         ' TxtCaption
@@ -233,12 +234,24 @@ Partial Class MessageMain
         BtnAbout.Text = "&About"
         BtnAbout.UseVisualStyleBackColor = True
         ' 
+        ' LblOptional
+        ' 
+        LblOptional.AutoSize = True
+        LblOptional.Font = New Font("Segoe UI", 12F)
+        LblOptional.Location = New Point(515, 207)
+        LblOptional.Margin = New Padding(4, 0, 4, 0)
+        LblOptional.Name = "LblOptional"
+        LblOptional.Size = New Size(80, 21)
+        LblOptional.TabIndex = 36
+        LblOptional.Text = "(Optional)"
+        ' 
         ' MessageMain
         ' 
         AutoScaleDimensions = New SizeF(9F, 21F)
         AutoScaleMode = AutoScaleMode.Font
         BackgroundImageLayout = ImageLayout.None
         ClientSize = New Size(975, 592)
+        Controls.Add(LblOptional)
         Controls.Add(BtnAbout)
         Controls.Add(Label1)
         Controls.Add(TxtVariable)
@@ -259,7 +272,9 @@ Partial Class MessageMain
         Controls.Add(LblMsgText)
         Controls.Add(TxtCaption)
         Font = New Font("Segoe UI", 12F)
+        FormBorderStyle = FormBorderStyle.Fixed3D
         Margin = New Padding(4)
+        MaximizeBox = False
         Name = "MessageMain"
         Text = "MessageBox Creator"
         ResumeLayout(False)
@@ -284,5 +299,6 @@ Partial Class MessageMain
     Friend WithEvents Label1 As Label
     Friend WithEvents TxtVariable As TextBox
     Friend WithEvents BtnAbout As Button
+    Friend WithEvents LblOptional As Label
 
 End Class
