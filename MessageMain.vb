@@ -19,14 +19,15 @@ Public Class MessageMain
 
     Sub LoadButtons()
         ' Create a list of Item objects
-        Dim items As New List(Of Item)()
-        items.Add(New Item("Abort, Retry, Ignore"))
-        items.Add(New Item("Cancel, Try Again, Continue"))
-        items.Add(New Item("Ok"))
-        items.Add(New Item("Ok, Cancel"))
-        items.Add(New Item("Retry, Cancel"))
-        items.Add(New Item("Yes, No"))
-        items.Add(New Item("Yes, No, Cancel"))
+        Dim items As New List(Of Item) From {
+            New Item("Abort, Retry, Ignore"),
+            New Item("Cancel, Try Again, Continue"),
+            New Item("Ok"),
+            New Item("Ok, Cancel"),
+            New Item("Retry, Cancel"),
+            New Item("Yes, No"),
+            New Item("Yes, No, Cancel")
+        }
 
         ' Set the ComboBox DataSource to the list of items
         CboButtons.DataSource = items
@@ -39,21 +40,22 @@ Public Class MessageMain
 
         ' You can also set other properties as needed, e.g., selected item, etc.
         CboButtons.SelectedIndex = 2
-        ButtonSelection = "System.Windows.Forms.MessageBoxButtons.Ok"
+        ButtonSelection = "MessageBoxButtons.Ok"
     End Sub
 
     Sub LoadIcons()
         ' Create a list of Item objects
-        Dim items As New List(Of Item)()
-        items.Add(New Item("Asterisk"))
-        items.Add(New Item("Error"))
-        items.Add(New Item("Exclamation"))
-        items.Add(New Item("Hand"))
-        items.Add(New Item("Information"))
-        items.Add(New Item("None"))
-        items.Add(New Item("Question"))
-        items.Add(New Item("Stop"))
-        items.Add(New Item("Warning"))
+        Dim items As New List(Of Item) From {
+            New Item("Asterisk"),
+            New Item("Error"),
+            New Item("Exclamation"),
+            New Item("Hand"),
+            New Item("Information"),
+            New Item("None"),
+            New Item("Question"),
+            New Item("Stop"),
+            New Item("Warning")
+        }
 
 
         ' Set the ComboBox DataSource to the list of items
@@ -71,12 +73,13 @@ Public Class MessageMain
 
     Sub LoadOptions()
         ' Create a list of Item objects
-        Dim items As New List(Of Item)()
-        items.Add(New Item("None"))
-        items.Add(New Item("Default Desktop Only"))
-        items.Add(New Item("Right-Align Text"))
-        items.Add(New Item("Right-To-Left Reading"))
-        items.Add(New Item("Service Notification"))
+        Dim items As New List(Of Item) From {
+            New Item("None"),
+            New Item("Default Desktop Only"),
+            New Item("Right-Align Text"),
+            New Item("Right-To-Left Reading"),
+            New Item("Service Notification")
+        }
 
 
 
@@ -286,45 +289,48 @@ Public Class MessageMain
 
         'sanity check
         If Len(RichTextBox1.Text) = 0 Then
-            MsgBox("No text to display", vbOK, "Blank entry?")
+            'MsgBox("No text to display", vbOK, "Blank entry?")
+            MessageBox.Show("No dialog text to display", "Error", MessageBoxButtons.OK, MessageBoxIcon.Asterisk, MessageBoxDefaultButton.Button1)
             Exit Sub
         End If
 
         If Len(TxtVariable.Text) > 0 Then ' use as variable
-            strResults = "Dim " & TxtVariable.Text & " As System.Windows.Forms.DialogResult = " 'System.Windows.Forms.MessageBox.Show("
+            strResults = "Dim " & TxtVariable.Text & " As DialogResult = " 'System.Windows.Forms.MessageBox.Show("
         End If
 
-        strResults = strResults & "System.Windows.Forms.MessageBox.Show("
-        strResults = strResults & "owner:me,"
-        strResults = strResults & "text:=""" & RichTextBox1.Text & ""","
-        strResults = strResults & "caption:=""" & TxtCaption.Text & ""","
+        strResults &= "MessageBox.Show(" 'System.Windows.Forms.
+        'strResults = strResults & "owner:me,"
+        strResults = strResults & """" & RichTextBox1.Text & ""","
+        strResults = strResults & """" & TxtCaption.Text & ""","
 
-        strResults = strResults & "buttons:=System.Windows.Forms." & ButtonSelection & ","
+        strResults = strResults & " " & ButtonSelection & "," 'System.Windows.Forms.
 
 
-        strResults = strResults & "icon:=System.Windows.Forms." & IconSelection & ","
+        strResults = strResults & " " & IconSelection & "," 'System.Windows.Forms.
         'End If
 
         If ButtonChoice1.FlatStyle = FlatStyle.Flat Then
-            strResults = strResults & "defaultButton:=System.Windows.Forms.MessageBoxDefaultButton.Button1,"
+            strResults &= "MessageBoxDefaultButton.Button1" 'System.Windows.Forms.
         End If
 
         If ButtonChoice2.FlatStyle = FlatStyle.Flat Then
-            strResults = strResults & "defaultButton:=System.Windows.Forms.MessageBoxDefaultButton.Button2,"
+            strResults &= "MessageBoxDefaultButton.Button2" 'System.Windows.Forms.
         End If
 
         If ButtonChoice3.FlatStyle = FlatStyle.Flat Then
-            strResults = strResults & "defaultButton:=System.Windows.Forms.MessageBoxDefaultButton.Button3,"
+            strResults &= "MessageBoxDefaultButton.Button3" 'System.Windows.Forms.
         End If
 
-        If Len(OptionSelection) > 0 Then
-            strResults = strResults & "options:=" & OptionSelection & ","
-        Else
-            strResults = strResults & "options:=System.Windows.Forms.MessageBoxOptions.DefaultDesktopOnly,"
-        End If
+        strResults &= ")"
 
-        strResults = strResults & "helpFilePath:="""","
-        strResults = strResults & "keyword:=""PickSomething"""
+        'If Len(OptionSelection) > 0 Then
+        '    strResults = strResults & " " & OptionSelection ' & ","
+        'Else
+        '    strResults = strResults & " MessageBoxOptions.DefaultDesktopOnly" 'System.Windows.Forms.
+        'End If
+
+        'strResults = strResults & "helpFilePath:="""","
+        'strResults = strResults & "keyword:=""PickSomething"""
 
         RTBResult.Text = strResults
 
@@ -332,7 +338,8 @@ Public Class MessageMain
         'strResults = strResults & "icon:=" Then
         'end if
     End Sub
-    Function ButtonConvert(Selection As Integer) As String
+
+    Shared Function ButtonConvert(Selection As Integer) As String
         'Dim strReturn As String = String.Empty
         'OK  0   
         'The Message box contains an OK button.

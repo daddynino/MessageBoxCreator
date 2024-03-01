@@ -48,112 +48,130 @@ Partial Class MessageMain
         ' 
         ' TxtCaption
         ' 
-        TxtCaption.Location = New Point(113, 103)
+        TxtCaption.Location = New Point(145, 151)
+        TxtCaption.Margin = New Padding(4)
         TxtCaption.Name = "TxtCaption"
-        TxtCaption.Size = New Size(247, 23)
+        TxtCaption.Size = New Size(340, 29)
         TxtCaption.TabIndex = 1
         ' 
         ' LblMsgText
         ' 
         LblMsgText.AutoSize = True
-        LblMsgText.Location = New Point(21, 31)
+        LblMsgText.Font = New Font("Segoe UI", 12F)
+        LblMsgText.Location = New Point(27, 43)
+        LblMsgText.Margin = New Padding(4, 0, 4, 0)
         LblMsgText.Name = "LblMsgText"
-        LblMsgText.Size = New Size(65, 15)
+        LblMsgText.Size = New Size(85, 21)
         LblMsgText.TabIndex = 10
         LblMsgText.Text = "Dialog Text"
         ' 
         ' LblCaption
         ' 
         LblCaption.AutoSize = True
-        LblCaption.Location = New Point(21, 108)
+        LblCaption.Font = New Font("Segoe UI", 12F)
+        LblCaption.Location = New Point(31, 159)
+        LblCaption.Margin = New Padding(4, 0, 4, 0)
         LblCaption.Name = "LblCaption"
-        LblCaption.Size = New Size(49, 15)
+        LblCaption.Size = New Size(64, 21)
         LblCaption.TabIndex = 11
         LblCaption.Text = "Caption"
         ' 
         ' LblDefault
         ' 
         LblDefault.AutoSize = True
-        LblDefault.Location = New Point(21, 184)
+        LblDefault.Font = New Font("Segoe UI", 12F)
+        LblDefault.Location = New Point(31, 268)
+        LblDefault.Margin = New Padding(4, 0, 4, 0)
         LblDefault.Name = "LblDefault"
-        LblDefault.Size = New Size(45, 15)
+        LblDefault.Size = New Size(60, 21)
         LblDefault.TabIndex = 13
         LblDefault.Text = "Default"
         ' 
         ' LblButtonType
         ' 
         LblButtonType.AutoSize = True
-        LblButtonType.Location = New Point(21, 140)
+        LblButtonType.Font = New Font("Segoe UI", 12F)
+        LblButtonType.Location = New Point(31, 213)
+        LblButtonType.Margin = New Padding(4, 0, 4, 0)
         LblButtonType.Name = "LblButtonType"
-        LblButtonType.Size = New Size(48, 15)
+        LblButtonType.Size = New Size(63, 21)
         LblButtonType.TabIndex = 15
         LblButtonType.Text = "Buttons"
         ' 
         ' RichTextBox1
         ' 
-        RichTextBox1.Location = New Point(113, 31)
+        RichTextBox1.Location = New Point(145, 43)
+        RichTextBox1.Margin = New Padding(4)
         RichTextBox1.Name = "RichTextBox1"
-        RichTextBox1.Size = New Size(647, 55)
+        RichTextBox1.Size = New Size(831, 75)
         RichTextBox1.TabIndex = 0
         RichTextBox1.Text = ""
         ' 
         ' CboButtons
         ' 
         CboButtons.FormattingEnabled = True
-        CboButtons.Location = New Point(113, 138)
+        CboButtons.Location = New Point(145, 209)
+        CboButtons.Margin = New Padding(4)
         CboButtons.Name = "CboButtons"
-        CboButtons.Size = New Size(247, 23)
+        CboButtons.Size = New Size(340, 29)
         CboButtons.TabIndex = 2
         ' 
         ' CboIconSelection
         ' 
         CboIconSelection.FormattingEnabled = True
-        CboIconSelection.Location = New Point(113, 218)
+        CboIconSelection.Location = New Point(636, 151)
+        CboIconSelection.Margin = New Padding(4)
         CboIconSelection.Name = "CboIconSelection"
-        CboIconSelection.Size = New Size(247, 23)
+        CboIconSelection.Size = New Size(340, 29)
         CboIconSelection.TabIndex = 6
         ' 
         ' LblIcon
         ' 
         LblIcon.AutoSize = True
-        LblIcon.Location = New Point(21, 220)
+        LblIcon.Font = New Font("Segoe UI", 12F)
+        LblIcon.Location = New Point(516, 160)
+        LblIcon.Margin = New Padding(4, 0, 4, 0)
         LblIcon.Name = "LblIcon"
-        LblIcon.Size = New Size(30, 15)
+        LblIcon.Size = New Size(39, 21)
         LblIcon.TabIndex = 21
         LblIcon.Text = "Icon"
         ' 
         ' ButtonChoice1
         ' 
-        ButtonChoice1.Location = New Point(113, 178)
+        ButtonChoice1.Location = New Point(153, 262)
+        ButtonChoice1.Margin = New Padding(4)
         ButtonChoice1.Name = "ButtonChoice1"
-        ButtonChoice1.Size = New Size(78, 23)
+        ButtonChoice1.Size = New Size(100, 32)
         ButtonChoice1.TabIndex = 3
         ButtonChoice1.Text = "Button1"
         ButtonChoice1.UseVisualStyleBackColor = True
         ' 
         ' ButtonChoice2
         ' 
-        ButtonChoice2.Location = New Point(198, 178)
+        ButtonChoice2.Location = New Point(262, 262)
+        ButtonChoice2.Margin = New Padding(4)
         ButtonChoice2.Name = "ButtonChoice2"
-        ButtonChoice2.Size = New Size(78, 23)
+        ButtonChoice2.Size = New Size(100, 32)
         ButtonChoice2.TabIndex = 4
         ButtonChoice2.Text = "Button2"
         ButtonChoice2.UseVisualStyleBackColor = True
         ' 
         ' ButtonChoice3
         ' 
-        ButtonChoice3.Location = New Point(282, 178)
+        ButtonChoice3.Location = New Point(370, 262)
+        ButtonChoice3.Margin = New Padding(4)
         ButtonChoice3.Name = "ButtonChoice3"
-        ButtonChoice3.Size = New Size(78, 23)
+        ButtonChoice3.Size = New Size(100, 32)
         ButtonChoice3.TabIndex = 5
         ButtonChoice3.Text = "Button3"
         ButtonChoice3.UseVisualStyleBackColor = True
         ' 
         ' BtnExit
         ' 
-        BtnExit.Location = New Point(704, 393)
+        BtnExit.Location = New Point(876, 571)
+        BtnExit.Margin = New Padding(4)
         BtnExit.Name = "BtnExit"
-        BtnExit.Size = New Size(78, 23)
+        BtnExit.Size = New Size(100, 32)
         BtnExit.TabIndex = 12
         BtnExit.Text = "E&xit"
         BtnExit.UseVisualStyleBackColor = True
@@ -161,51 +179,59 @@ Partial Class MessageMain
         ' CboOptions
         ' 
         CboOptions.FormattingEnabled = True
-        CboOptions.Location = New Point(113, 252)
+        CboOptions.Location = New Point(154, 508)
+        CboOptions.Margin = New Padding(4)
         CboOptions.Name = "CboOptions"
-        CboOptions.Size = New Size(247, 23)
+        CboOptions.Size = New Size(99, 29)
         CboOptions.TabIndex = 7
+        CboOptions.Visible = False
         ' 
         ' LblOptions
         ' 
         LblOptions.AutoSize = True
-        LblOptions.Location = New Point(21, 254)
+        LblOptions.Location = New Point(36, 510)
+        LblOptions.Margin = New Padding(4, 0, 4, 0)
         LblOptions.Name = "LblOptions"
-        LblOptions.Size = New Size(49, 15)
+        LblOptions.Size = New Size(65, 21)
         LblOptions.TabIndex = 27
         LblOptions.Text = "Options"
+        LblOptions.Visible = False
         ' 
         ' BtnGenerate
         ' 
-        BtnGenerate.Location = New Point(198, 324)
+        BtnGenerate.Location = New Point(757, 268)
+        BtnGenerate.Margin = New Padding(4)
         BtnGenerate.Name = "BtnGenerate"
-        BtnGenerate.Size = New Size(78, 23)
+        BtnGenerate.Size = New Size(100, 32)
         BtnGenerate.TabIndex = 9
         BtnGenerate.Text = "&Generate"
         BtnGenerate.UseVisualStyleBackColor = True
         ' 
         ' RTBResult
         ' 
-        RTBResult.Location = New Point(389, 138)
+        RTBResult.Location = New Point(145, 321)
+        RTBResult.Margin = New Padding(4)
         RTBResult.Name = "RTBResult"
-        RTBResult.Size = New Size(371, 169)
+        RTBResult.Size = New Size(831, 179)
         RTBResult.TabIndex = 10
         RTBResult.Text = ""
         ' 
         ' LblResult
         ' 
         LblResult.AutoSize = True
-        LblResult.Location = New Point(389, 106)
+        LblResult.Location = New Point(31, 321)
+        LblResult.Margin = New Padding(4, 0, 4, 0)
         LblResult.Name = "LblResult"
-        LblResult.Size = New Size(73, 15)
+        LblResult.Size = New Size(96, 21)
         LblResult.TabIndex = 31
         LblResult.Text = "Code Result:"
         ' 
         ' BtnCopy
         ' 
-        BtnCopy.Location = New Point(521, 324)
+        BtnCopy.Location = New Point(489, 520)
+        BtnCopy.Margin = New Padding(4)
         BtnCopy.Name = "BtnCopy"
-        BtnCopy.Size = New Size(78, 23)
+        BtnCopy.Size = New Size(100, 32)
         BtnCopy.TabIndex = 11
         BtnCopy.Text = "Copy &Text"
         BtnCopy.UseVisualStyleBackColor = True
@@ -213,36 +239,40 @@ Partial Class MessageMain
         ' Label1
         ' 
         Label1.AutoSize = True
-        Label1.Location = New Point(21, 291)
+        Label1.Font = New Font("Segoe UI", 12F)
+        Label1.Location = New Point(516, 214)
+        Label1.Margin = New Padding(4, 0, 4, 0)
         Label1.Name = "Label1"
-        Label1.Size = New Size(83, 15)
+        Label1.Size = New Size(112, 21)
         Label1.TabIndex = 34
         Label1.Text = "Variable Name"
         ' 
         ' TxtVariable
         ' 
-        TxtVariable.Location = New Point(113, 286)
+        TxtVariable.Location = New Point(636, 209)
+        TxtVariable.Margin = New Padding(4)
         TxtVariable.Name = "TxtVariable"
-        TxtVariable.Size = New Size(247, 23)
+        TxtVariable.Size = New Size(340, 29)
         TxtVariable.TabIndex = 8
         ' 
         ' Button1
         ' 
         Button1.FlatAppearance.BorderSize = 0
         Button1.FlatStyle = FlatStyle.Flat
-        Button1.Location = New Point(12, 393)
+        Button1.Location = New Point(27, 574)
+        Button1.Margin = New Padding(4)
         Button1.Name = "Button1"
-        Button1.Size = New Size(58, 23)
+        Button1.Size = New Size(75, 32)
         Button1.TabIndex = 35
         Button1.Text = "&About"
         Button1.UseVisualStyleBackColor = True
         ' 
         ' MessageMain
         ' 
-        AutoScaleDimensions = New SizeF(7F, 15F)
+        AutoScaleDimensions = New SizeF(9F, 21F)
         AutoScaleMode = AutoScaleMode.Font
         BackgroundImageLayout = ImageLayout.None
-        ClientSize = New Size(794, 428)
+        ClientSize = New Size(998, 620)
         Controls.Add(Button1)
         Controls.Add(Label1)
         Controls.Add(TxtVariable)
@@ -265,6 +295,8 @@ Partial Class MessageMain
         Controls.Add(LblCaption)
         Controls.Add(LblMsgText)
         Controls.Add(TxtCaption)
+        Font = New Font("Segoe UI", 12F)
+        Margin = New Padding(4)
         Name = "MessageMain"
         Text = "MessageBox Creator"
         ResumeLayout(False)
