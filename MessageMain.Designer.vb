@@ -35,9 +35,6 @@ Partial Class MessageMain
         ButtonChoice2 = New Button()
         ButtonChoice3 = New Button()
         BtnExit = New Button()
-        CboOptions = New ComboBox()
-        LblOptions = New Label()
-        BtnGenerate = New Button()
         RTBResult = New RichTextBox()
         LblResult = New Label()
         BtnCopy = New Button()
@@ -176,37 +173,6 @@ Partial Class MessageMain
         BtnExit.Text = "E&xit"
         BtnExit.UseVisualStyleBackColor = True
         ' 
-        ' CboOptions
-        ' 
-        CboOptions.FormattingEnabled = True
-        CboOptions.Location = New Point(154, 508)
-        CboOptions.Margin = New Padding(4)
-        CboOptions.Name = "CboOptions"
-        CboOptions.Size = New Size(99, 29)
-        CboOptions.TabIndex = 7
-        CboOptions.Visible = False
-        ' 
-        ' LblOptions
-        ' 
-        LblOptions.AutoSize = True
-        LblOptions.Location = New Point(36, 510)
-        LblOptions.Margin = New Padding(4, 0, 4, 0)
-        LblOptions.Name = "LblOptions"
-        LblOptions.Size = New Size(65, 21)
-        LblOptions.TabIndex = 27
-        LblOptions.Text = "Options"
-        LblOptions.Visible = False
-        ' 
-        ' BtnGenerate
-        ' 
-        BtnGenerate.Location = New Point(757, 268)
-        BtnGenerate.Margin = New Padding(4)
-        BtnGenerate.Name = "BtnGenerate"
-        BtnGenerate.Size = New Size(100, 32)
-        BtnGenerate.TabIndex = 9
-        BtnGenerate.Text = "&Generate"
-        BtnGenerate.UseVisualStyleBackColor = True
-        ' 
         ' RTBResult
         ' 
         RTBResult.Location = New Point(145, 321)
@@ -279,9 +245,6 @@ Partial Class MessageMain
         Controls.Add(BtnCopy)
         Controls.Add(LblResult)
         Controls.Add(RTBResult)
-        Controls.Add(BtnGenerate)
-        Controls.Add(CboOptions)
-        Controls.Add(LblOptions)
         Controls.Add(BtnExit)
         Controls.Add(ButtonChoice3)
         Controls.Add(ButtonChoice2)
@@ -315,9 +278,6 @@ Partial Class MessageMain
     Friend WithEvents ButtonChoice2 As Button
     Friend WithEvents ButtonChoice3 As Button
     Friend WithEvents BtnExit As Button
-    Friend WithEvents CboOptions As ComboBox
-    Friend WithEvents LblOptions As Label
-    Friend WithEvents BtnGenerate As Button
     Friend WithEvents RTBResult As RichTextBox
     Friend WithEvents LblResult As Label
     Friend WithEvents BtnCopy As Button
