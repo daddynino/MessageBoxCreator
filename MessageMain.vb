@@ -99,7 +99,7 @@ Public Class MessageMain
     Private Sub CboButtons_SelectedIndexChanged(sender As Object, e As EventArgs) Handles CboButtons.SelectedIndexChanged
         'MsgBox("selected index Is:" & CboButtons.SelectedIndex.ToString)
         'MsgBox("selected item is: " & CboButtons.SelectedIndex.ToString)
-        Select Case CboButtons.SelectedIndex.ToString
+        Select Case CInt(CboButtons.SelectedIndex.ToString)
             Case 0
                 ButtonSelection = "MessageBoxButtons.AbortRetryIgnore"
                 ChangeActiveButton(1)
@@ -173,7 +173,7 @@ Public Class MessageMain
     End Sub
 
     Private Sub CboIconSelection_SelectedIndexChanged(sender As Object, e As EventArgs) Handles CboIconSelection.SelectedIndexChanged
-        Select Case CboIconSelection.SelectedIndex.ToString
+        Select Case CInt(CboIconSelection.SelectedIndex.ToString)
             Case 0
                 IconSelection = "MessageBoxIcon.Asterisk"
             Case 1
@@ -199,7 +199,7 @@ Public Class MessageMain
 
     Sub ChangeActiveButton(ButtonNumber As Integer)
         Select Case ButtonNumber
-            Case "1"
+            Case 1
                 ButtonChoice1.FlatStyle = FlatStyle.Flat
                 ButtonChoice1.FlatAppearance.BorderSize = 1
                 ButtonChoice2.FlatStyle = FlatStyle.Standard
@@ -207,7 +207,7 @@ Public Class MessageMain
                 ButtonChoice3.FlatStyle = FlatStyle.Standard
                 ButtonChoice3.FlatAppearance.BorderSize = 0
                 ButtonDefault = 1
-            Case "2"
+            Case 2
                 ButtonChoice1.FlatStyle = FlatStyle.Standard
                 ButtonChoice1.FlatAppearance.BorderSize = 0
                 ButtonChoice2.FlatStyle = FlatStyle.Flat
@@ -215,7 +215,7 @@ Public Class MessageMain
                 ButtonChoice3.FlatStyle = FlatStyle.Standard
                 ButtonChoice3.FlatAppearance.BorderSize = 0
                 ButtonDefault = 2
-            Case "3"
+            Case 3
                 ButtonChoice1.FlatStyle = FlatStyle.Standard
                 ButtonChoice1.FlatAppearance.BorderSize = 0
                 ButtonChoice2.FlatStyle = FlatStyle.Standard
@@ -251,7 +251,7 @@ Public Class MessageMain
     End Sub
 
     Private Sub CboOptions_SelectedIndexChanged(sender As Object, e As EventArgs) Handles CboOptions.SelectedIndexChanged
-        Select Case CboOptions.SelectedIndex.ToString
+        Select Case CInt(CboOptions.SelectedIndex.ToString)
             Case 0
                 OptionSelection = Nothing
             Case 1

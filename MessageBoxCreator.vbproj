@@ -18,6 +18,7 @@
     <PackageReleaseNotes></PackageReleaseNotes>
     <FileVersion>1.0.2</FileVersion>
     <AssemblyVersion>1.0.2</AssemblyVersion>
+    <OptionStrict>On</OptionStrict>
   </PropertyGroup>
 
   <ItemGroup>
