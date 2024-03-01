@@ -72,31 +72,6 @@ Public Class MessageMain
         CboIconSelection.SelectedIndex = 5 '"MessageBoxIcon.Information"
     End Sub
 
-    'Sub LoadOptions()
-    '    ' Create a list of Item objects
-    '    Dim items As New List(Of Item) From {
-    '        New Item("None"),
-    '        New Item("Default Desktop Only"),
-    '        New Item("Right-Align Text"),
-    '        New Item("Right-To-Left Reading"),
-    '        New Item("Service Notification")
-    '    }
-
-
-
-    '    ' Set the ComboBox DataSource to the list of items
-    '    CboOptions.DataSource = items
-
-    '    ' Set the DisplayMember to the property you want to display (in this case, "Name")
-    '    CboOptions.DisplayMember = "Name"
-
-    '    ' Optionally, set the ValueMember if you want to retrieve the selected object later
-    '    'CboIconSelection.ValueMember = "ID"
-
-    '    ' You can also set other properties as needed, e.g., selected item, etc.
-    '    CboOptions.SelectedIndex = 0
-    '    OptionSelection = Nothing
-    'End Sub
     Private Sub CboButtons_SelectedIndexChanged(sender As Object, e As EventArgs) Handles CboButtons.SelectedIndexChanged
         'MsgBox("selected index Is:" & CboButtons.SelectedIndex.ToString)
         'MsgBox("selected item is: " & CboButtons.SelectedIndex.ToString)
@@ -294,7 +269,10 @@ Public Class MessageMain
     Sub Generate()
         Dim strResults As String = String.Empty
         RTBResult.Text = String.Empty
-
+        If String.IsNullOrWhiteSpace(RichTextBox1.Text) Then
+            RTBResult.Text = "" 'String.Empty
+            Exit Sub
+        End If
         'sanity check
         'If Len(RichTextBox1.Text) = 0 Then
         '    'MsgBox("No text to display", vbOK, "Blank entry?")
@@ -398,8 +376,7 @@ Public Class MessageMain
     'End Sub
 
     Private Sub LockItems(ValidText As Boolean)
-
-        'If ValidText Then
+        ' Enable or disable controls based on the ValidText value
         Me.TxtCaption.Enabled = ValidText
         Me.CboButtons.Enabled = ValidText
         Me.ButtonChoice1.Enabled = ValidText
@@ -407,20 +384,28 @@ Public Class MessageMain
         Me.ButtonChoice3.Enabled = ValidText
         Me.CboIconSelection.Enabled = ValidText
         Me.TxtVariable.Enabled = ValidText
-        If Not ValidText Then
-            Me.RTBResult.Text = String.Empty
-        End If
-        Me.RTBResult.Enabled = ValidText
+        ' Removed duplicate line for TxtVariable
         Me.BtnCopy.Enabled = ValidText
-        Me.TxtVariable.Enabled = ValidText
-        'End If
+        Me.RTBResult.Enabled = ValidText
+        Exit Sub
+        ' Special handling for RTBResult
+        If Not ValidText Then
+            ' If ValidText is False, clear RTBResult and disable it
+            Me.RTBResult.Text = ""
+            Me.RTBResult.Enabled = False
+        Else
+            ' Otherwise, enable or disable RTBResult based on ValidText
+            Me.RTBResult.Enabled = ValidText
+        End If
     End Sub
+
 
     Private Sub BtnAbout_Click(sender As Object, e As EventArgs) Handles BtnAbout.Click
         About.Show()
     End Sub
 
     Private Sub RichTextBox1_TextChanged(sender As Object, e As EventArgs) Handles RichTextBox1.TextChanged
+
         LockItems(Not String.IsNullOrWhiteSpace(RichTextBox1.Text))
         Generate()
     End Sub

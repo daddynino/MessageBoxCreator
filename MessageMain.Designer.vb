@@ -45,7 +45,7 @@ Partial Class MessageMain
         ' 
         ' TxtCaption
         ' 
-        TxtCaption.Location = New Point(145, 151)
+        TxtCaption.Location = New Point(129, 123)
         TxtCaption.Margin = New Padding(4)
         TxtCaption.Name = "TxtCaption"
         TxtCaption.Size = New Size(340, 29)
@@ -55,7 +55,7 @@ Partial Class MessageMain
         ' 
         LblMsgText.AutoSize = True
         LblMsgText.Font = New Font("Segoe UI", 12F)
-        LblMsgText.Location = New Point(27, 43)
+        LblMsgText.Location = New Point(11, 15)
         LblMsgText.Margin = New Padding(4, 0, 4, 0)
         LblMsgText.Name = "LblMsgText"
         LblMsgText.Size = New Size(85, 21)
@@ -66,7 +66,7 @@ Partial Class MessageMain
         ' 
         LblCaption.AutoSize = True
         LblCaption.Font = New Font("Segoe UI", 12F)
-        LblCaption.Location = New Point(31, 159)
+        LblCaption.Location = New Point(15, 131)
         LblCaption.Margin = New Padding(4, 0, 4, 0)
         LblCaption.Name = "LblCaption"
         LblCaption.Size = New Size(64, 21)
@@ -77,7 +77,7 @@ Partial Class MessageMain
         ' 
         LblDefault.AutoSize = True
         LblDefault.Font = New Font("Segoe UI", 12F)
-        LblDefault.Location = New Point(31, 268)
+        LblDefault.Location = New Point(15, 240)
         LblDefault.Margin = New Padding(4, 0, 4, 0)
         LblDefault.Name = "LblDefault"
         LblDefault.Size = New Size(60, 21)
@@ -88,7 +88,7 @@ Partial Class MessageMain
         ' 
         LblButtonType.AutoSize = True
         LblButtonType.Font = New Font("Segoe UI", 12F)
-        LblButtonType.Location = New Point(31, 213)
+        LblButtonType.Location = New Point(15, 185)
         LblButtonType.Margin = New Padding(4, 0, 4, 0)
         LblButtonType.Name = "LblButtonType"
         LblButtonType.Size = New Size(63, 21)
@@ -97,7 +97,7 @@ Partial Class MessageMain
         ' 
         ' RichTextBox1
         ' 
-        RichTextBox1.Location = New Point(145, 43)
+        RichTextBox1.Location = New Point(129, 15)
         RichTextBox1.Margin = New Padding(4)
         RichTextBox1.Name = "RichTextBox1"
         RichTextBox1.Size = New Size(831, 75)
@@ -107,7 +107,7 @@ Partial Class MessageMain
         ' CboButtons
         ' 
         CboButtons.FormattingEnabled = True
-        CboButtons.Location = New Point(145, 209)
+        CboButtons.Location = New Point(129, 181)
         CboButtons.Margin = New Padding(4)
         CboButtons.Name = "CboButtons"
         CboButtons.Size = New Size(340, 29)
@@ -116,7 +116,7 @@ Partial Class MessageMain
         ' CboIconSelection
         ' 
         CboIconSelection.FormattingEnabled = True
-        CboIconSelection.Location = New Point(636, 151)
+        CboIconSelection.Location = New Point(620, 123)
         CboIconSelection.Margin = New Padding(4)
         CboIconSelection.Name = "CboIconSelection"
         CboIconSelection.Size = New Size(340, 29)
@@ -126,7 +126,7 @@ Partial Class MessageMain
         ' 
         LblIcon.AutoSize = True
         LblIcon.Font = New Font("Segoe UI", 12F)
-        LblIcon.Location = New Point(516, 160)
+        LblIcon.Location = New Point(500, 132)
         LblIcon.Margin = New Padding(4, 0, 4, 0)
         LblIcon.Name = "LblIcon"
         LblIcon.Size = New Size(39, 21)
@@ -135,7 +135,7 @@ Partial Class MessageMain
         ' 
         ' ButtonChoice1
         ' 
-        ButtonChoice1.Location = New Point(153, 262)
+        ButtonChoice1.Location = New Point(137, 234)
         ButtonChoice1.Margin = New Padding(4)
         ButtonChoice1.Name = "ButtonChoice1"
         ButtonChoice1.Size = New Size(100, 32)
@@ -145,7 +145,7 @@ Partial Class MessageMain
         ' 
         ' ButtonChoice2
         ' 
-        ButtonChoice2.Location = New Point(262, 262)
+        ButtonChoice2.Location = New Point(246, 234)
         ButtonChoice2.Margin = New Padding(4)
         ButtonChoice2.Name = "ButtonChoice2"
         ButtonChoice2.Size = New Size(100, 32)
@@ -155,7 +155,7 @@ Partial Class MessageMain
         ' 
         ' ButtonChoice3
         ' 
-        ButtonChoice3.Location = New Point(370, 262)
+        ButtonChoice3.Location = New Point(354, 234)
         ButtonChoice3.Margin = New Padding(4)
         ButtonChoice3.Name = "ButtonChoice3"
         ButtonChoice3.Size = New Size(100, 32)
@@ -165,7 +165,7 @@ Partial Class MessageMain
         ' 
         ' BtnExit
         ' 
-        BtnExit.Location = New Point(876, 571)
+        BtnExit.Location = New Point(860, 543)
         BtnExit.Margin = New Padding(4)
         BtnExit.Name = "BtnExit"
         BtnExit.Size = New Size(100, 32)
@@ -175,7 +175,7 @@ Partial Class MessageMain
         ' 
         ' RTBResult
         ' 
-        RTBResult.Location = New Point(145, 321)
+        RTBResult.Location = New Point(129, 293)
         RTBResult.Margin = New Padding(4)
         RTBResult.Name = "RTBResult"
         RTBResult.Size = New Size(831, 179)
@@ -185,7 +185,7 @@ Partial Class MessageMain
         ' LblResult
         ' 
         LblResult.AutoSize = True
-        LblResult.Location = New Point(31, 321)
+        LblResult.Location = New Point(15, 293)
         LblResult.Margin = New Padding(4, 0, 4, 0)
         LblResult.Name = "LblResult"
         LblResult.Size = New Size(96, 21)
@@ -194,7 +194,7 @@ Partial Class MessageMain
         ' 
         ' BtnCopy
         ' 
-        BtnCopy.Location = New Point(489, 520)
+        BtnCopy.Location = New Point(473, 492)
         BtnCopy.Margin = New Padding(4)
         BtnCopy.Name = "BtnCopy"
         BtnCopy.Size = New Size(100, 32)
@@ -206,7 +206,7 @@ Partial Class MessageMain
         ' 
         Label1.AutoSize = True
         Label1.Font = New Font("Segoe UI", 12F)
-        Label1.Location = New Point(516, 214)
+        Label1.Location = New Point(500, 186)
         Label1.Margin = New Padding(4, 0, 4, 0)
         Label1.Name = "Label1"
         Label1.Size = New Size(112, 21)
@@ -215,7 +215,7 @@ Partial Class MessageMain
         ' 
         ' TxtVariable
         ' 
-        TxtVariable.Location = New Point(636, 209)
+        TxtVariable.Location = New Point(620, 181)
         TxtVariable.Margin = New Padding(4)
         TxtVariable.Name = "TxtVariable"
         TxtVariable.Size = New Size(340, 29)
@@ -225,7 +225,7 @@ Partial Class MessageMain
         ' 
         BtnAbout.FlatAppearance.BorderSize = 0
         BtnAbout.FlatStyle = FlatStyle.Flat
-        BtnAbout.Location = New Point(27, 574)
+        BtnAbout.Location = New Point(11, 546)
         BtnAbout.Margin = New Padding(4)
         BtnAbout.Name = "BtnAbout"
         BtnAbout.Size = New Size(75, 32)
@@ -238,7 +238,7 @@ Partial Class MessageMain
         AutoScaleDimensions = New SizeF(9F, 21F)
         AutoScaleMode = AutoScaleMode.Font
         BackgroundImageLayout = ImageLayout.None
-        ClientSize = New Size(998, 620)
+        ClientSize = New Size(975, 592)
         Controls.Add(BtnAbout)
         Controls.Add(Label1)
         Controls.Add(TxtVariable)
