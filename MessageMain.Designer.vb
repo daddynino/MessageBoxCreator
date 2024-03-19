@@ -34,224 +34,332 @@ Partial Class MessageMain
         ButtonChoice1 = New Button()
         ButtonChoice2 = New Button()
         ButtonChoice3 = New Button()
-        BtnExit = New Button()
         RTBResult = New RichTextBox()
         LblResult = New Label()
         BtnCopy = New Button()
         Label1 = New Label()
         TxtVariable = New TextBox()
         BtnAbout = New Button()
-        LblOptional = New Label()
+        PanelTitleHeader = New Panel()
+        LblXToClose = New Label()
+        LabelTitleHeader = New Label()
+        Panel1 = New Panel()
+        Panel2 = New Panel()
+        Panel3 = New Panel()
+        BtnExit = New Button()
+        Panel4 = New Panel()
+        Panel5 = New Panel()
+        PanelTitleHeader.SuspendLayout()
         SuspendLayout()
         ' 
         ' TxtCaption
         ' 
-        TxtCaption.Location = New Point(129, 123)
+        TxtCaption.Font = New Font("Century Gothic", 14.25F)
+        TxtCaption.Location = New Point(13, 206)
         TxtCaption.Margin = New Padding(4)
         TxtCaption.Name = "TxtCaption"
-        TxtCaption.Size = New Size(340, 29)
+        TxtCaption.Size = New Size(389, 31)
         TxtCaption.TabIndex = 1
         ' 
         ' LblMsgText
         ' 
         LblMsgText.AutoSize = True
-        LblMsgText.Font = New Font("Segoe UI", 12F)
-        LblMsgText.Location = New Point(11, 15)
+        LblMsgText.Font = New Font("Century Gothic", 14.25F)
+        LblMsgText.ForeColor = Color.White
+        LblMsgText.Location = New Point(13, 51)
         LblMsgText.Margin = New Padding(4, 0, 4, 0)
         LblMsgText.Name = "LblMsgText"
-        LblMsgText.Size = New Size(85, 21)
+        LblMsgText.Size = New Size(109, 22)
         LblMsgText.TabIndex = 10
         LblMsgText.Text = "Dialog Text"
         ' 
         ' LblCaption
         ' 
         LblCaption.AutoSize = True
-        LblCaption.Font = New Font("Segoe UI", 12F)
-        LblCaption.Location = New Point(15, 131)
+        LblCaption.Font = New Font("Century Gothic", 14.25F)
+        LblCaption.ForeColor = Color.White
+        LblCaption.Location = New Point(13, 180)
         LblCaption.Margin = New Padding(4, 0, 4, 0)
         LblCaption.Name = "LblCaption"
-        LblCaption.Size = New Size(64, 21)
+        LblCaption.Size = New Size(85, 22)
         LblCaption.TabIndex = 11
         LblCaption.Text = "Caption"
         ' 
         ' LblDefault
         ' 
         LblDefault.AutoSize = True
-        LblDefault.Font = New Font("Segoe UI", 12F)
-        LblDefault.Location = New Point(15, 240)
+        LblDefault.Font = New Font("Century Gothic", 14.25F)
+        LblDefault.ForeColor = Color.White
+        LblDefault.Location = New Point(13, 349)
         LblDefault.Margin = New Padding(4, 0, 4, 0)
         LblDefault.Name = "LblDefault"
-        LblDefault.Size = New Size(60, 21)
+        LblDefault.Size = New Size(143, 22)
         LblDefault.TabIndex = 13
-        LblDefault.Text = "Default"
+        LblDefault.Text = "Default Button"
         ' 
         ' LblButtonType
         ' 
         LblButtonType.AutoSize = True
-        LblButtonType.Font = New Font("Segoe UI", 12F)
-        LblButtonType.Location = New Point(15, 185)
+        LblButtonType.Font = New Font("Century Gothic", 14.25F)
+        LblButtonType.ForeColor = Color.White
+        LblButtonType.Location = New Point(13, 266)
         LblButtonType.Margin = New Padding(4, 0, 4, 0)
         LblButtonType.Name = "LblButtonType"
-        LblButtonType.Size = New Size(63, 21)
+        LblButtonType.Size = New Size(78, 22)
         LblButtonType.TabIndex = 15
         LblButtonType.Text = "Buttons"
         ' 
         ' RichTextBox1
         ' 
-        RichTextBox1.Location = New Point(129, 15)
+        RichTextBox1.Font = New Font("Century Gothic", 14.25F)
+        RichTextBox1.Location = New Point(13, 77)
         RichTextBox1.Margin = New Padding(4)
         RichTextBox1.Name = "RichTextBox1"
-        RichTextBox1.Size = New Size(831, 75)
+        RichTextBox1.Size = New Size(823, 75)
         RichTextBox1.TabIndex = 0
         RichTextBox1.Text = ""
         ' 
         ' CboButtons
         ' 
+        CboButtons.Font = New Font("Century Gothic", 14.25F)
         CboButtons.FormattingEnabled = True
-        CboButtons.Location = New Point(129, 181)
+        CboButtons.Location = New Point(13, 292)
         CboButtons.Margin = New Padding(4)
         CboButtons.Name = "CboButtons"
-        CboButtons.Size = New Size(340, 29)
+        CboButtons.Size = New Size(389, 30)
         CboButtons.TabIndex = 2
         ' 
         ' CboIconSelection
         ' 
+        CboIconSelection.Font = New Font("Century Gothic", 14.25F)
         CboIconSelection.FormattingEnabled = True
-        CboIconSelection.Location = New Point(620, 123)
+        CboIconSelection.Location = New Point(13, 460)
         CboIconSelection.Margin = New Padding(4)
         CboIconSelection.Name = "CboIconSelection"
-        CboIconSelection.Size = New Size(340, 29)
+        CboIconSelection.Size = New Size(389, 30)
         CboIconSelection.TabIndex = 6
         ' 
         ' LblIcon
         ' 
         LblIcon.AutoSize = True
-        LblIcon.Font = New Font("Segoe UI", 12F)
-        LblIcon.Location = New Point(500, 132)
+        LblIcon.Font = New Font("Century Gothic", 14.25F)
+        LblIcon.ForeColor = Color.White
+        LblIcon.Location = New Point(13, 434)
         LblIcon.Margin = New Padding(4, 0, 4, 0)
         LblIcon.Name = "LblIcon"
-        LblIcon.Size = New Size(39, 21)
+        LblIcon.Size = New Size(51, 22)
         LblIcon.TabIndex = 21
         LblIcon.Text = "Icon"
         ' 
         ' ButtonChoice1
         ' 
-        ButtonChoice1.Location = New Point(137, 234)
+        ButtonChoice1.FlatStyle = FlatStyle.Flat
+        ButtonChoice1.Font = New Font("Century Gothic", 12F)
+        ButtonChoice1.ForeColor = Color.White
+        ButtonChoice1.Location = New Point(13, 375)
         ButtonChoice1.Margin = New Padding(4)
         ButtonChoice1.Name = "ButtonChoice1"
-        ButtonChoice1.Size = New Size(100, 32)
+        ButtonChoice1.Size = New Size(129, 32)
         ButtonChoice1.TabIndex = 3
         ButtonChoice1.Text = "Button1"
         ButtonChoice1.UseVisualStyleBackColor = True
         ' 
         ' ButtonChoice2
         ' 
-        ButtonChoice2.Location = New Point(246, 234)
+        ButtonChoice2.FlatStyle = FlatStyle.Flat
+        ButtonChoice2.Font = New Font("Century Gothic", 12F)
+        ButtonChoice2.ForeColor = Color.White
+        ButtonChoice2.Location = New Point(143, 375)
         ButtonChoice2.Margin = New Padding(4)
         ButtonChoice2.Name = "ButtonChoice2"
-        ButtonChoice2.Size = New Size(100, 32)
+        ButtonChoice2.Size = New Size(129, 32)
         ButtonChoice2.TabIndex = 4
         ButtonChoice2.Text = "Button2"
         ButtonChoice2.UseVisualStyleBackColor = True
         ' 
         ' ButtonChoice3
         ' 
-        ButtonChoice3.Location = New Point(354, 234)
+        ButtonChoice3.FlatStyle = FlatStyle.Flat
+        ButtonChoice3.Font = New Font("Century Gothic", 12F)
+        ButtonChoice3.ForeColor = Color.White
+        ButtonChoice3.Location = New Point(273, 375)
         ButtonChoice3.Margin = New Padding(4)
         ButtonChoice3.Name = "ButtonChoice3"
-        ButtonChoice3.Size = New Size(100, 32)
+        ButtonChoice3.Size = New Size(129, 32)
         ButtonChoice3.TabIndex = 5
         ButtonChoice3.Text = "Button3"
         ButtonChoice3.UseVisualStyleBackColor = True
         ' 
-        ' BtnExit
-        ' 
-        BtnExit.Location = New Point(860, 543)
-        BtnExit.Margin = New Padding(4)
-        BtnExit.Name = "BtnExit"
-        BtnExit.Size = New Size(100, 32)
-        BtnExit.TabIndex = 12
-        BtnExit.Text = "E&xit"
-        BtnExit.UseVisualStyleBackColor = True
-        ' 
         ' RTBResult
         ' 
-        RTBResult.Location = New Point(129, 293)
+        RTBResult.Font = New Font("Century Gothic", 14.25F)
+        RTBResult.Location = New Point(417, 207)
         RTBResult.Margin = New Padding(4)
         RTBResult.Name = "RTBResult"
-        RTBResult.Size = New Size(831, 179)
-        RTBResult.TabIndex = 10
+        RTBResult.Size = New Size(426, 285)
+        RTBResult.TabIndex = 8
         RTBResult.Text = ""
         ' 
         ' LblResult
         ' 
         LblResult.AutoSize = True
-        LblResult.Location = New Point(15, 293)
+        LblResult.Font = New Font("Century Gothic", 14.25F)
+        LblResult.ForeColor = Color.White
+        LblResult.Location = New Point(563, 180)
         LblResult.Margin = New Padding(4, 0, 4, 0)
         LblResult.Name = "LblResult"
-        LblResult.Size = New Size(96, 21)
+        LblResult.Size = New Size(120, 22)
         LblResult.TabIndex = 31
-        LblResult.Text = "Code Result:"
+        LblResult.Text = "Code Result"
         ' 
         ' BtnCopy
         ' 
-        BtnCopy.Location = New Point(473, 492)
+        BtnCopy.Location = New Point(583, 500)
         BtnCopy.Margin = New Padding(4)
         BtnCopy.Name = "BtnCopy"
         BtnCopy.Size = New Size(100, 32)
-        BtnCopy.TabIndex = 11
+        BtnCopy.TabIndex = 9
         BtnCopy.Text = "Copy &Text"
         BtnCopy.UseVisualStyleBackColor = True
         ' 
         ' Label1
         ' 
         Label1.AutoSize = True
-        Label1.Font = New Font("Segoe UI", 12F)
-        Label1.Location = New Point(500, 186)
+        Label1.Font = New Font("Century Gothic", 14.25F)
+        Label1.ForeColor = Color.White
+        Label1.Location = New Point(12, 517)
         Label1.Margin = New Padding(4, 0, 4, 0)
         Label1.Name = "Label1"
-        Label1.Size = New Size(112, 21)
+        Label1.Size = New Size(248, 22)
         Label1.TabIndex = 34
-        Label1.Text = "Variable Name"
+        Label1.Text = "Variable Name (Optional)"
         ' 
         ' TxtVariable
         ' 
-        TxtVariable.Location = New Point(620, 181)
+        TxtVariable.Font = New Font("Century Gothic", 14.25F)
+        TxtVariable.Location = New Point(12, 543)
         TxtVariable.Margin = New Padding(4)
         TxtVariable.Name = "TxtVariable"
-        TxtVariable.Size = New Size(340, 29)
-        TxtVariable.TabIndex = 8
+        TxtVariable.Size = New Size(389, 31)
+        TxtVariable.TabIndex = 7
         ' 
         ' BtnAbout
         ' 
         BtnAbout.FlatAppearance.BorderSize = 0
         BtnAbout.FlatStyle = FlatStyle.Flat
-        BtnAbout.Location = New Point(11, 546)
-        BtnAbout.Margin = New Padding(4)
+        BtnAbout.Font = New Font("Century Gothic", 14.25F)
+        BtnAbout.ForeColor = Color.White
+        BtnAbout.Location = New Point(13, 608)
+        BtnAbout.Margin = New Padding(0)
         BtnAbout.Name = "BtnAbout"
-        BtnAbout.Size = New Size(75, 32)
-        BtnAbout.TabIndex = 35
+        BtnAbout.Size = New Size(86, 32)
+        BtnAbout.TabIndex = 10
         BtnAbout.Text = "&About"
         BtnAbout.UseVisualStyleBackColor = True
         ' 
-        ' LblOptional
+        ' PanelTitleHeader
         ' 
-        LblOptional.AutoSize = True
-        LblOptional.Font = New Font("Segoe UI", 12F)
-        LblOptional.Location = New Point(515, 207)
-        LblOptional.Margin = New Padding(4, 0, 4, 0)
-        LblOptional.Name = "LblOptional"
-        LblOptional.Size = New Size(80, 21)
-        LblOptional.TabIndex = 36
-        LblOptional.Text = "(Optional)"
+        PanelTitleHeader.BackColor = Color.Green
+        PanelTitleHeader.Controls.Add(LblXToClose)
+        PanelTitleHeader.Controls.Add(LabelTitleHeader)
+        PanelTitleHeader.Dock = DockStyle.Top
+        PanelTitleHeader.Location = New Point(0, 0)
+        PanelTitleHeader.Name = "PanelTitleHeader"
+        PanelTitleHeader.Size = New Size(853, 43)
+        PanelTitleHeader.TabIndex = 37
+        ' 
+        ' LblXToClose
+        ' 
+        LblXToClose.AutoSize = True
+        LblXToClose.Font = New Font("Century Gothic", 14.25F, FontStyle.Italic, GraphicsUnit.Point, CByte(0))
+        LblXToClose.ForeColor = Color.White
+        LblXToClose.Location = New Point(827, 9)
+        LblXToClose.Name = "LblXToClose"
+        LblXToClose.Size = New Size(22, 22)
+        LblXToClose.TabIndex = 1
+        LblXToClose.Text = "X"
+        ' 
+        ' LabelTitleHeader
+        ' 
+        LabelTitleHeader.AutoSize = True
+        LabelTitleHeader.Font = New Font("Century Gothic", 14.25F)
+        LabelTitleHeader.ForeColor = Color.White
+        LabelTitleHeader.Location = New Point(12, 9)
+        LabelTitleHeader.Name = "LabelTitleHeader"
+        LabelTitleHeader.Size = New Size(199, 22)
+        LabelTitleHeader.TabIndex = 0
+        LabelTitleHeader.Text = "MessageBox Creator"
+        ' 
+        ' Panel1
+        ' 
+        Panel1.BackColor = Color.Green
+        Panel1.Dock = DockStyle.Left
+        Panel1.Location = New Point(0, 43)
+        Panel1.Name = "Panel1"
+        Panel1.Size = New Size(3, 610)
+        Panel1.TabIndex = 38
+        ' 
+        ' Panel2
+        ' 
+        Panel2.BackColor = Color.Green
+        Panel2.Dock = DockStyle.Bottom
+        Panel2.Location = New Point(3, 650)
+        Panel2.Name = "Panel2"
+        Panel2.Size = New Size(850, 3)
+        Panel2.TabIndex = 39
+        ' 
+        ' Panel3
+        ' 
+        Panel3.BackColor = Color.Green
+        Panel3.Dock = DockStyle.Right
+        Panel3.Location = New Point(850, 43)
+        Panel3.Name = "Panel3"
+        Panel3.Size = New Size(3, 607)
+        Panel3.TabIndex = 39
+        ' 
+        ' BtnExit
+        ' 
+        BtnExit.FlatAppearance.BorderSize = 0
+        BtnExit.FlatStyle = FlatStyle.Flat
+        BtnExit.Font = New Font("Century Gothic", 14.25F)
+        BtnExit.ForeColor = Color.White
+        BtnExit.Location = New Point(777, 608)
+        BtnExit.Margin = New Padding(4)
+        BtnExit.Name = "BtnExit"
+        BtnExit.Size = New Size(72, 32)
+        BtnExit.TabIndex = 11
+        BtnExit.Text = "E&xit"
+        BtnExit.UseVisualStyleBackColor = True
+        ' 
+        ' Panel4
+        ' 
+        Panel4.BackColor = Color.FromArgb(CByte(128), CByte(64), CByte(64))
+        Panel4.Location = New Point(409, 166)
+        Panel4.Name = "Panel4"
+        Panel4.Size = New Size(3, 475)
+        Panel4.TabIndex = 40
+        ' 
+        ' Panel5
+        ' 
+        Panel5.BackColor = Color.FromArgb(CByte(128), CByte(64), CByte(64))
+        Panel5.Location = New Point(13, 163)
+        Panel5.Name = "Panel5"
+        Panel5.Size = New Size(823, 3)
+        Panel5.TabIndex = 41
         ' 
         ' MessageMain
         ' 
         AutoScaleDimensions = New SizeF(9F, 21F)
         AutoScaleMode = AutoScaleMode.Font
+        BackColor = Color.FromArgb(CByte(64), CByte(64), CByte(64))
         BackgroundImageLayout = ImageLayout.None
-        ClientSize = New Size(975, 592)
-        Controls.Add(LblOptional)
+        ClientSize = New Size(853, 653)
+        Controls.Add(Panel4)
+        Controls.Add(Panel5)
+        Controls.Add(Panel3)
+        Controls.Add(Panel2)
+        Controls.Add(Panel1)
+        Controls.Add(PanelTitleHeader)
         Controls.Add(BtnAbout)
         Controls.Add(Label1)
         Controls.Add(TxtVariable)
@@ -272,11 +380,13 @@ Partial Class MessageMain
         Controls.Add(LblMsgText)
         Controls.Add(TxtCaption)
         Font = New Font("Segoe UI", 12F)
-        FormBorderStyle = FormBorderStyle.Fixed3D
+        FormBorderStyle = FormBorderStyle.None
         Margin = New Padding(4)
         MaximizeBox = False
         Name = "MessageMain"
         Text = "MessageBox Creator"
+        PanelTitleHeader.ResumeLayout(False)
+        PanelTitleHeader.PerformLayout()
         ResumeLayout(False)
         PerformLayout()
     End Sub
@@ -292,13 +402,20 @@ Partial Class MessageMain
     Friend WithEvents ButtonChoice1 As Button
     Friend WithEvents ButtonChoice2 As Button
     Friend WithEvents ButtonChoice3 As Button
-    Friend WithEvents BtnExit As Button
     Friend WithEvents RTBResult As RichTextBox
     Friend WithEvents LblResult As Label
     Friend WithEvents BtnCopy As Button
     Friend WithEvents Label1 As Label
     Friend WithEvents TxtVariable As TextBox
     Friend WithEvents BtnAbout As Button
-    Friend WithEvents LblOptional As Label
+    Friend WithEvents PanelTitleHeader As Panel
+    Friend WithEvents LblXToClose As Label
+    Friend WithEvents LabelTitleHeader As Label
+    Friend WithEvents Panel1 As Panel
+    Friend WithEvents Panel2 As Panel
+    Friend WithEvents Panel3 As Panel
+    Friend WithEvents BtnExit As Button
+    Friend WithEvents Panel4 As Panel
+    Friend WithEvents Panel5 As Panel
 
 End Class

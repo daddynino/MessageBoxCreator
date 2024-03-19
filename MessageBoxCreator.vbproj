@@ -16,8 +16,8 @@
     <RepositoryUrl>https://github.com/daddynino/MessageBoxCreator</RepositoryUrl>
     <RepositoryType>git</RepositoryType>
     <PackageReleaseNotes></PackageReleaseNotes>
-    <FileVersion>1.0.3</FileVersion>
-    <AssemblyVersion>1.0.3</AssemblyVersion>
+    <FileVersion>24.3.19</FileVersion>
+    <AssemblyVersion>24.3.19</AssemblyVersion>
     <OptionStrict>On</OptionStrict>
     <AnalysisLevel>latest-recommended</AnalysisLevel>
   </PropertyGroup>
