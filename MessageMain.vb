@@ -269,13 +269,13 @@ Public Class MessageMain
             strResults = "Dim " & TxtVariable.Text & " As DialogResult = "
         End If
 
-        strResults &= "MessageBox.Show(" & vbCrLf
-        strResults = strResults & """" & RichTextBox1.Text & """," & vbCrLf
-        strResults = strResults & """" & TxtCaption.Text & """," & vbCrLf
+        strResults &= "MessageBox.Show("
+        strResults = strResults & """" & RichTextBox1.Text & ""","
+        strResults = strResults & """" & TxtCaption.Text & ""","
 
-        strResults = strResults & " " & ButtonSelection & "," & vbCrLf
+        strResults = strResults & " " & ButtonSelection & ","
 
-        strResults = strResults & " " & IconSelection & "," & vbCrLf
+        strResults = strResults & " " & IconSelection & ","
 
 
         If ButtonDefault > 0 Then

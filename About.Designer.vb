@@ -35,6 +35,9 @@ Partial Class About
         LblTitle = New Label()
         Panel1 = New Panel()
         BtnExit = New Button()
+        Panel3 = New Panel()
+        Panel4 = New Panel()
+        Panel5 = New Panel()
         CType(LogoPictureBox, ComponentModel.ISupportInitialize).BeginInit()
         Panel2.SuspendLayout()
         SuspendLayout()
@@ -116,7 +119,7 @@ Partial Class About
         ' 
         ' Panel2
         ' 
-        Panel2.BackColor = Color.Green
+        Panel2.BackColor = Color.Maroon
         Panel2.Controls.Add(LblXToClose)
         Panel2.Controls.Add(LblTitle)
         Panel2.Dock = DockStyle.Top
@@ -150,7 +153,7 @@ Partial Class About
         ' 
         ' Panel1
         ' 
-        Panel1.BackColor = Color.Green
+        Panel1.BackColor = Color.Maroon
         Panel1.Location = New Point(194, 145)
         Panel1.Name = "Panel1"
         Panel1.Size = New Size(223, 5)
@@ -170,6 +173,33 @@ Partial Class About
         BtnExit.Text = "&Close"
         BtnExit.UseVisualStyleBackColor = True
         ' 
+        ' Panel3
+        ' 
+        Panel3.BackColor = Color.Maroon
+        Panel3.Dock = DockStyle.Right
+        Panel3.Location = New Point(455, 43)
+        Panel3.Name = "Panel3"
+        Panel3.Size = New Size(3, 286)
+        Panel3.TabIndex = 40
+        ' 
+        ' Panel4
+        ' 
+        Panel4.BackColor = Color.Maroon
+        Panel4.Dock = DockStyle.Left
+        Panel4.Location = New Point(0, 43)
+        Panel4.Name = "Panel4"
+        Panel4.Size = New Size(3, 286)
+        Panel4.TabIndex = 41
+        ' 
+        ' Panel5
+        ' 
+        Panel5.BackColor = Color.Maroon
+        Panel5.Dock = DockStyle.Bottom
+        Panel5.Location = New Point(3, 326)
+        Panel5.Name = "Panel5"
+        Panel5.Size = New Size(452, 3)
+        Panel5.TabIndex = 42
+        ' 
         ' About
         ' 
         AutoScaleDimensions = New SizeF(7F, 15F)
@@ -177,6 +207,9 @@ Partial Class About
         BackColor = Color.FromArgb(CByte(64), CByte(64), CByte(64))
         BackgroundImageLayout = ImageLayout.Zoom
         ClientSize = New Size(458, 329)
+        Controls.Add(Panel5)
+        Controls.Add(Panel4)
+        Controls.Add(Panel3)
         Controls.Add(BtnExit)
         Controls.Add(Panel1)
         Controls.Add(TextBoxDescription)
@@ -209,5 +242,8 @@ Partial Class About
     Friend WithEvents TxtCopyright As TextBox
     Friend WithEvents Panel1 As Panel
     Friend WithEvents BtnExit As Button
+    Friend WithEvents Panel3 As Panel
+    Friend WithEvents Panel4 As Panel
+    Friend WithEvents Panel5 As Panel
 
 End Class

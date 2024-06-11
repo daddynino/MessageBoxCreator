@@ -245,21 +245,24 @@ Partial Class MessageMain
         ' 
         ' BtnAbout
         ' 
+        BtnAbout.BackColor = Color.Maroon
         BtnAbout.FlatAppearance.BorderSize = 0
+        BtnAbout.FlatAppearance.MouseDownBackColor = Color.Maroon
+        BtnAbout.FlatAppearance.MouseOverBackColor = Color.FromArgb(CByte(192), CByte(0), CByte(0))
         BtnAbout.FlatStyle = FlatStyle.Flat
         BtnAbout.Font = New Font("Century Gothic", 14.25F)
         BtnAbout.ForeColor = Color.White
-        BtnAbout.Location = New Point(13, 608)
+        BtnAbout.Location = New Point(13, 605)
         BtnAbout.Margin = New Padding(0)
         BtnAbout.Name = "BtnAbout"
         BtnAbout.Size = New Size(86, 32)
         BtnAbout.TabIndex = 10
         BtnAbout.Text = "&About"
-        BtnAbout.UseVisualStyleBackColor = True
+        BtnAbout.UseVisualStyleBackColor = False
         ' 
         ' PanelTitleHeader
         ' 
-        PanelTitleHeader.BackColor = Color.Green
+        PanelTitleHeader.BackColor = Color.Maroon
         PanelTitleHeader.Controls.Add(LblXToClose)
         PanelTitleHeader.Controls.Add(LabelTitleHeader)
         PanelTitleHeader.Dock = DockStyle.Top
@@ -292,7 +295,7 @@ Partial Class MessageMain
         ' 
         ' Panel1
         ' 
-        Panel1.BackColor = Color.Green
+        Panel1.BackColor = Color.Maroon
         Panel1.Dock = DockStyle.Left
         Panel1.Location = New Point(0, 43)
         Panel1.Name = "Panel1"
@@ -301,7 +304,7 @@ Partial Class MessageMain
         ' 
         ' Panel2
         ' 
-        Panel2.BackColor = Color.Green
+        Panel2.BackColor = Color.Maroon
         Panel2.Dock = DockStyle.Bottom
         Panel2.Location = New Point(3, 650)
         Panel2.Name = "Panel2"
@@ -310,7 +313,7 @@ Partial Class MessageMain
         ' 
         ' Panel3
         ' 
-        Panel3.BackColor = Color.Green
+        Panel3.BackColor = Color.Maroon
         Panel3.Dock = DockStyle.Right
         Panel3.Location = New Point(850, 43)
         Panel3.Name = "Panel3"
@@ -319,17 +322,20 @@ Partial Class MessageMain
         ' 
         ' BtnExit
         ' 
+        BtnExit.BackColor = Color.Maroon
         BtnExit.FlatAppearance.BorderSize = 0
+        BtnExit.FlatAppearance.MouseDownBackColor = Color.Maroon
+        BtnExit.FlatAppearance.MouseOverBackColor = Color.FromArgb(CByte(192), CByte(0), CByte(0))
         BtnExit.FlatStyle = FlatStyle.Flat
         BtnExit.Font = New Font("Century Gothic", 14.25F)
         BtnExit.ForeColor = Color.White
-        BtnExit.Location = New Point(777, 608)
+        BtnExit.Location = New Point(766, 605)
         BtnExit.Margin = New Padding(4)
         BtnExit.Name = "BtnExit"
         BtnExit.Size = New Size(72, 32)
         BtnExit.TabIndex = 11
         BtnExit.Text = "E&xit"
-        BtnExit.UseVisualStyleBackColor = True
+        BtnExit.UseVisualStyleBackColor = False
         ' 
         ' Panel4
         ' 
