@@ -1,8 +1,13 @@
-﻿Public Class MessageMain
+﻿Imports System.Globalization
+
+Public Class MessageMain
     Dim ButtonSelection As String
     Dim ButtonDefault As Integer
     Dim IconSelection As String
     Dim OptionSelection As String
+
+    Dim dragging As Boolean
+    Dim startPoint As Point
 
     Private tooltips As New ToolTip()
 
@@ -68,9 +73,13 @@
     End Sub
 
     Private Sub CboButtons_SelectedIndexChanged(sender As Object, e As EventArgs) Handles CboButtons.SelectedIndexChanged
+        Dim selectedIndex As Integer = CInt(CboButtons.SelectedIndex)
+        Dim selectedValue As String = selectedIndex.ToString(CultureInfo.InvariantCulture) ' Using CultureInfo.InvariantCulture as the format provider
+        ' Use the selectedValue as needed
+        Select Case selectedValue
 
-        Select Case CInt(CboButtons.SelectedIndex.ToString)
-            Case 0
+
+            Case "0"
                 ButtonSelection = "MessageBoxButtons.AbortRetryIgnore"
                 ChangeActiveButton(1)
                 ButtonChoice1.Visible = True
@@ -79,7 +88,7 @@
                 ButtonChoice1.Text = "Abort"
                 ButtonChoice2.Text = "Retry"
                 ButtonChoice3.Text = "Ignore"
-            Case 1
+            Case "1"
                 ButtonSelection = "MessageBoxButtons.CancelTryContinue"
                 ChangeActiveButton(1)
                 ButtonChoice1.Visible = True
@@ -88,7 +97,7 @@
                 ButtonChoice1.Text = "Cancel"
                 ButtonChoice2.Text = "Try"
                 ButtonChoice3.Text = "Continue"
-            Case 2
+            Case "2"
                 ButtonSelection = "MessageBoxButtons.OK"
                 ChangeActiveButton(1)
                 ButtonChoice1.Text = "Ok"
@@ -96,7 +105,7 @@
                 ButtonChoice2.Visible = False
                 ButtonChoice3.Visible = False
 
-            Case 3
+            Case "3"
                 ButtonSelection = "MessageBoxButtons.OKCancel"
                 ChangeActiveButton(2)
                 ButtonChoice1.Text = "Ok"
@@ -105,7 +114,7 @@
                 ButtonChoice2.Visible = True
                 ButtonChoice3.Visible = False
 
-            Case 4
+            Case "4"
                 ButtonSelection = "MessageBoxButtons.RetryCancel"
                 ChangeActiveButton(2)
                 ButtonChoice1.Text = "Retry"
@@ -113,7 +122,7 @@
                 ButtonChoice1.Visible = True
                 ButtonChoice2.Visible = True
                 ButtonChoice3.Visible = False
-            Case 5
+            Case "5"
                 ButtonSelection = "MessageBoxButtons.YesNo"
                 ChangeActiveButton(2)
                 ButtonChoice1.Text = "Yes"
@@ -121,7 +130,7 @@
                 ButtonChoice1.Visible = True
                 ButtonChoice2.Visible = True
                 ButtonChoice3.Visible = False
-            Case 6
+            Case "6"
                 ButtonSelection = "MessageBoxButtons.YesNoCancel"
                 ChangeActiveButton(3)
                 ButtonChoice1.Text = "Yes"
@@ -143,24 +152,27 @@
     End Sub
 
     Private Sub CboIconSelection_SelectedIndexChanged(sender As Object, e As EventArgs) Handles CboIconSelection.SelectedIndexChanged
-        Select Case CInt(CboIconSelection.SelectedIndex.ToString)
-            Case 0
+        Dim selectedIndex As Integer = CInt(CboIconSelection.SelectedIndex)
+        Dim selectedValue As String = selectedIndex.ToString(CultureInfo.InvariantCulture) ' Using CultureInfo.InvariantCulture as the format provider
+        ' Use the selectedValue as needed
+        Select Case selectedValue'CInt(CboIconSelection.SelectedIndex.ToString)
+            Case "0"
                 IconSelection = "MessageBoxIcon.Asterisk"
-            Case 1
+            Case "1"
                 IconSelection = "MessageBoxIcon.Error"
-            Case 2
+            Case "2"
                 IconSelection = "MessageBoxIcon.Exclamation"
-            Case 3
+            Case "3"
                 IconSelection = "MessageBoxIcon.Hand"
-            Case 4
+            Case "4"
                 IconSelection = "MessageBoxIcon.Information"
-            Case 5
+            Case "5"
                 IconSelection = "MessageBoxIcon.None"
-            Case 6
+            Case "6"
                 IconSelection = "MessageBoxIcon.Question"
-            Case 7
+            Case "7"
                 IconSelection = "MessageBoxIcon.Stop"
-            Case 8
+            Case "8"
                 IconSelection = "MessageBoxIcon.Warning"
             Case Else
                 IconSelection = "MessageBoxIcon.None"
@@ -171,35 +183,35 @@
     Sub ChangeActiveButton(ButtonNumber As Integer)
         Select Case ButtonNumber
             Case 1
-                ButtonChoice1.FlatStyle = FlatStyle.Flat
+                'ButtonChoice1.FlatStyle = FlatStyle.Flat
                 ButtonChoice1.FlatAppearance.BorderSize = 1
-                ButtonChoice2.FlatStyle = FlatStyle.Standard
+                'ButtonChoice2.FlatStyle = FlatStyle.Standard
                 ButtonChoice2.FlatAppearance.BorderSize = 0
-                ButtonChoice3.FlatStyle = FlatStyle.Standard
+                'ButtonChoice3.FlatStyle = FlatStyle.Standard
                 ButtonChoice3.FlatAppearance.BorderSize = 0
                 ButtonDefault = 1
             Case 2
-                ButtonChoice1.FlatStyle = FlatStyle.Standard
+                'ButtonChoice1.FlatStyle = FlatStyle.Standard
                 ButtonChoice1.FlatAppearance.BorderSize = 0
-                ButtonChoice2.FlatStyle = FlatStyle.Flat
+                'ButtonChoice2.FlatStyle = FlatStyle.Flat
                 ButtonChoice2.FlatAppearance.BorderSize = 1
-                ButtonChoice3.FlatStyle = FlatStyle.Standard
+                'ButtonChoice3.FlatStyle = FlatStyle.Standard
                 ButtonChoice3.FlatAppearance.BorderSize = 0
                 ButtonDefault = 2
             Case 3
-                ButtonChoice1.FlatStyle = FlatStyle.Standard
+                'ButtonChoice1.FlatStyle = FlatStyle.Standard
                 ButtonChoice1.FlatAppearance.BorderSize = 0
-                ButtonChoice2.FlatStyle = FlatStyle.Standard
+                'ButtonChoice2.FlatStyle = FlatStyle.Standard
                 ButtonChoice2.FlatAppearance.BorderSize = 0
-                ButtonChoice3.FlatStyle = FlatStyle.Flat
+                'ButtonChoice3.FlatStyle = FlatStyle.Flat
                 ButtonChoice3.FlatAppearance.BorderSize = 1
                 ButtonDefault = 3
             Case Else
-                ButtonChoice1.FlatStyle = FlatStyle.Standard
+                'ButtonChoice1.FlatStyle = FlatStyle.Standard
                 ButtonChoice1.FlatAppearance.BorderSize = 0
-                ButtonChoice2.FlatStyle = FlatStyle.Standard
+                'ButtonChoice2.FlatStyle = FlatStyle.Standard
                 ButtonChoice2.FlatAppearance.BorderSize = 0
-                ButtonChoice3.FlatStyle = FlatStyle.Standard
+                'ButtonChoice3.FlatStyle = FlatStyle.Standard
                 ButtonChoice3.FlatAppearance.BorderSize = 0
                 ButtonDefault = 1
         End Select
@@ -237,6 +249,7 @@
         tooltips.SetToolTip(TxtVariable, "Save user response to this varible")
         tooltips.SetToolTip(BtnAbout, "Open the application About form")
         tooltips.SetToolTip(BtnExit, "Exit the app")
+        tooltips.SetToolTip(LblXToClose, "Exit the app")
     End Sub
 
     Private Sub BtnGenerate_Click(sender As Object, e As EventArgs)
@@ -265,19 +278,11 @@
         strResults = strResults & " " & IconSelection & ","
 
 
-        If ButtonChoice1.FlatStyle = FlatStyle.Flat Then
-            strResults &= "MessageBoxDefaultButton.Button1"
+        If ButtonDefault > 0 Then
+            strResults &= "MessageBoxDefaultButton.Button" & ButtonDefault & ")"
+        Else
+            strResults &= "MessageBoxDefaultButton.Button1)"
         End If
-
-        If ButtonChoice2.FlatStyle = FlatStyle.Flat Then
-            strResults &= "MessageBoxDefaultButton.Button2"
-        End If
-
-        If ButtonChoice3.FlatStyle = FlatStyle.Flat Then
-            strResults &= "MessageBoxDefaultButton.Button3"
-        End If
-
-        strResults &= ")"
 
         RTBResult.Text = strResults
 
@@ -361,6 +366,69 @@
         Generate()
     End Sub
 
+    Private Sub LblXToClose_Click(sender As Object, e As EventArgs) Handles LblXToClose.Click
+        Me.Close()
+    End Sub
+
+    Private Sub MessageMain_MouseDown(sender As Object, e As MouseEventArgs) Handles Me.MouseDown
+        If e.Button = MouseButtons.Left Then
+            dragging = True
+            startPoint = New Point(e.X, e.Y)
+        End If
+    End Sub
+
+    Private Sub MessageMain_MouseMove(sender As Object, e As MouseEventArgs) Handles Me.MouseMove
+        If dragging Then
+            Dim p As Point = Me.PointToScreen(New Point(e.X, e.Y))
+            Me.Location = New Point(p.X - startPoint.X, p.Y - startPoint.Y)
+        End If
+    End Sub
+
+    Private Sub MessageMain_MouseUp(sender As Object, e As MouseEventArgs) Handles Me.MouseUp
+        If e.Button = MouseButtons.Left Then
+            dragging = False
+        End If
+    End Sub
+
+    Private Sub PanelTitleHeader_MouseDown(sender As Object, e As MouseEventArgs) Handles PanelTitleHeader.MouseDown
+        If e.Button = MouseButtons.Left Then
+            dragging = True
+            startPoint = New Point(e.X, e.Y)
+        End If
+    End Sub
+
+    Private Sub PanelTitleHeader_MouseMove(sender As Object, e As MouseEventArgs) Handles PanelTitleHeader.MouseMove
+        If dragging Then
+            Dim p As Point = Me.PointToScreen(New Point(e.X, e.Y))
+            Me.Location = New Point(p.X - startPoint.X, p.Y - startPoint.Y)
+        End If
+    End Sub
+
+    Private Sub PanelTitleHeader_MouseUp(sender As Object, e As MouseEventArgs) Handles PanelTitleHeader.MouseUp
+        If e.Button = MouseButtons.Left Then
+            dragging = False
+        End If
+    End Sub
+
+    Private Sub LabelTitleHeader_MouseDown(sender As Object, e As MouseEventArgs) Handles LabelTitleHeader.MouseDown
+        If e.Button = MouseButtons.Left Then
+            dragging = True
+            startPoint = New Point(e.X, e.Y)
+        End If
+    End Sub
+
+    Private Sub LabelTitleHeader_MouseMove(sender As Object, e As MouseEventArgs) Handles LabelTitleHeader.MouseMove
+        If dragging Then
+            Dim p = PointToScreen(New Point(e.X, e.Y))
+            Location = New Point(p.X - startPoint.X, p.Y - startPoint.Y)
+        End If
+    End Sub
+
+    Private Sub LabelTitleHeader_MouseUp(sender As Object, e As MouseEventArgs) Handles LabelTitleHeader.MouseUp
+        If e.Button = MouseButtons.Left Then
+            dragging = False
+        End If
+    End Sub
 End Class
 
 Public Class Item
