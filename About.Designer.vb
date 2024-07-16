@@ -132,11 +132,11 @@ Partial Class About
         ' LblXToClose
         ' 
         LblXToClose.AutoSize = True
-        LblXToClose.Font = New Font("Microsoft Sans Serif", 14.25F, FontStyle.Bold Or FontStyle.Italic)
+        LblXToClose.Font = New Font("Microsoft Sans Serif", 14.25F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
         LblXToClose.ForeColor = Color.White
         LblXToClose.Location = New Point(430, 11)
         LblXToClose.Name = "LblXToClose"
-        LblXToClose.Size = New Size(25, 24)
+        LblXToClose.Size = New Size(24, 24)
         LblXToClose.TabIndex = 1
         LblXToClose.Text = "&X"
         ' 
