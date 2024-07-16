@@ -14,7 +14,6 @@ Public Class MessageMain
     Private Sub MessageMain_Load(sender As Object, e As EventArgs) Handles Me.Load
         LoadButtons()
         LoadIcons()
-        'LoadOptions()
         SetTooltips()
         LockItems(Not String.IsNullOrWhiteSpace(RichTextBox1.Text))
     End Sub
@@ -33,14 +32,7 @@ Public Class MessageMain
 
         ' Set the ComboBox DataSource to the list of items
         CboButtons.DataSource = items
-
-        ' Set the DisplayMember to the property you want to display (in this case, "Name")
         CboButtons.DisplayMember = "Name"
-
-        ' Optionally, set the ValueMember if you want to retrieve the selected object later
-        'CboButtons.ValueMember = "ID"
-
-        ' You can also set other properties as needed, e.g., selected item, etc.
         CboButtons.SelectedIndex = 2
         ButtonSelection = "MessageBoxButtons.Ok"
     End Sub
@@ -58,97 +50,71 @@ Public Class MessageMain
             New Item("Stop"),
             New Item("Warning")
         }
-
         ' Set the ComboBox DataSource to the list of items
         CboIconSelection.DataSource = items
-
-        ' Set the DisplayMember to the property you want to display (in this case, "Name")
         CboIconSelection.DisplayMember = "Name"
-
-        ' Optionally, set the ValueMember if you want to retrieve the selected object later
-        'CboIconSelection.ValueMember = "ID"
-
-        ' You can also set other properties as needed, e.g., selected item, etc.
         CboIconSelection.SelectedIndex = 5 '"MessageBoxIcon.Information"
     End Sub
 
     Private Sub CboButtons_SelectedIndexChanged(sender As Object, e As EventArgs) Handles CboButtons.SelectedIndexChanged
-        Dim selectedIndex As Integer = CInt(CboButtons.SelectedIndex)
-        Dim selectedValue As String = selectedIndex.ToString(CultureInfo.InvariantCulture) ' Using CultureInfo.InvariantCulture as the format provider
-        ' Use the selectedValue as needed
-        Select Case selectedValue
+        Dim selectedIndex As Integer = CboButtons.SelectedIndex
 
-
-            Case "0"
+        Select Case selectedIndex
+            Case 0
                 ButtonSelection = "MessageBoxButtons.AbortRetryIgnore"
                 ChangeActiveButton(1)
-                ButtonChoice1.Visible = True
-                ButtonChoice2.Visible = True
-                ButtonChoice3.Visible = True
-                ButtonChoice1.Text = "Abort"
-                ButtonChoice2.Text = "Retry"
-                ButtonChoice3.Text = "Ignore"
-            Case "1"
+                SetButtonVisibility(True, True, True)
+                SetButtonText("Abort", "Retry", "Ignore")
+            Case 1
                 ButtonSelection = "MessageBoxButtons.CancelTryContinue"
                 ChangeActiveButton(1)
-                ButtonChoice1.Visible = True
-                ButtonChoice2.Visible = True
-                ButtonChoice3.Visible = True
-                ButtonChoice1.Text = "Cancel"
-                ButtonChoice2.Text = "Try"
-                ButtonChoice3.Text = "Continue"
-            Case "2"
+                SetButtonVisibility(True, True, True)
+                SetButtonText("Cancel", "Try", "Continue")
+            Case 2
                 ButtonSelection = "MessageBoxButtons.OK"
                 ChangeActiveButton(1)
-                ButtonChoice1.Text = "Ok"
-                ButtonChoice1.Visible = True
-                ButtonChoice2.Visible = False
-                ButtonChoice3.Visible = False
-
-            Case "3"
+                SetButtonVisibility(True, False, False)
+                SetButtonText("Ok", "", "")
+            Case 3
                 ButtonSelection = "MessageBoxButtons.OKCancel"
                 ChangeActiveButton(2)
-                ButtonChoice1.Text = "Ok"
-                ButtonChoice2.Text = "Cancel"
-                ButtonChoice1.Visible = True
-                ButtonChoice2.Visible = True
-                ButtonChoice3.Visible = False
-
-            Case "4"
+                SetButtonVisibility(True, True, False)
+                SetButtonText("Ok", "Cancel", "")
+            Case 4
                 ButtonSelection = "MessageBoxButtons.RetryCancel"
                 ChangeActiveButton(2)
-                ButtonChoice1.Text = "Retry"
-                ButtonChoice2.Text = "Cancel"
-                ButtonChoice1.Visible = True
-                ButtonChoice2.Visible = True
-                ButtonChoice3.Visible = False
-            Case "5"
+                SetButtonVisibility(True, True, False)
+                SetButtonText("Retry", "Cancel", "")
+            Case 5
                 ButtonSelection = "MessageBoxButtons.YesNo"
                 ChangeActiveButton(2)
-                ButtonChoice1.Text = "Yes"
-                ButtonChoice2.Text = "No"
-                ButtonChoice1.Visible = True
-                ButtonChoice2.Visible = True
-                ButtonChoice3.Visible = False
-            Case "6"
+                SetButtonVisibility(True, True, False)
+                SetButtonText("Yes", "No", "")
+            Case 6
                 ButtonSelection = "MessageBoxButtons.YesNoCancel"
                 ChangeActiveButton(3)
-                ButtonChoice1.Text = "Yes"
-                ButtonChoice2.Text = "No"
-                ButtonChoice3.Text = "Cancel"
-                ButtonChoice1.Visible = True
-                ButtonChoice2.Visible = True
-                ButtonChoice3.Visible = True
+                SetButtonVisibility(True, True, True)
+                SetButtonText("Yes", "No", "Cancel")
             Case Else
-                ' Handle other cases or do nothing, defaults to OK
                 ButtonSelection = "MessageBoxButtons.OK"
                 ChangeActiveButton(1)
-                ButtonChoice1.Text = "Ok"
-                ButtonChoice1.Visible = True
-                ButtonChoice2.Visible = False
-                ButtonChoice3.Visible = False
+                SetButtonVisibility(True, False, False)
+                SetButtonText("Ok", "", "")
         End Select
+
         Generate()
+    End Sub
+
+    Private Sub SetButtonVisibility(visible1 As Boolean, visible2 As Boolean, visible3 As Boolean)
+        ButtonChoice1.Visible = visible1
+        ButtonChoice2.Visible = visible2
+        ButtonChoice3.Visible = visible3
+    End Sub
+
+    Private Sub SetButtonText(text1 As String, text2 As String, text3 As String)
+        ButtonChoice1.Text = text1
+        ButtonChoice2.Text = text2
+        ButtonChoice3.Text = text3
     End Sub
 
     Private Sub CboIconSelection_SelectedIndexChanged(sender As Object, e As EventArgs) Handles CboIconSelection.SelectedIndexChanged
@@ -181,40 +147,24 @@ Public Class MessageMain
     End Sub
 
     Sub ChangeActiveButton(ButtonNumber As Integer)
-        Select Case ButtonNumber
-            Case 1
-                'ButtonChoice1.FlatStyle = FlatStyle.Flat
-                ButtonChoice1.FlatAppearance.BorderSize = 1
-                'ButtonChoice2.FlatStyle = FlatStyle.Standard
-                ButtonChoice2.FlatAppearance.BorderSize = 0
-                'ButtonChoice3.FlatStyle = FlatStyle.Standard
-                ButtonChoice3.FlatAppearance.BorderSize = 0
-                ButtonDefault = 1
-            Case 2
-                'ButtonChoice1.FlatStyle = FlatStyle.Standard
-                ButtonChoice1.FlatAppearance.BorderSize = 0
-                'ButtonChoice2.FlatStyle = FlatStyle.Flat
-                ButtonChoice2.FlatAppearance.BorderSize = 1
-                'ButtonChoice3.FlatStyle = FlatStyle.Standard
-                ButtonChoice3.FlatAppearance.BorderSize = 0
-                ButtonDefault = 2
-            Case 3
-                'ButtonChoice1.FlatStyle = FlatStyle.Standard
-                ButtonChoice1.FlatAppearance.BorderSize = 0
-                'ButtonChoice2.FlatStyle = FlatStyle.Standard
-                ButtonChoice2.FlatAppearance.BorderSize = 0
-                'ButtonChoice3.FlatStyle = FlatStyle.Flat
-                ButtonChoice3.FlatAppearance.BorderSize = 1
-                ButtonDefault = 3
-            Case Else
-                'ButtonChoice1.FlatStyle = FlatStyle.Standard
-                ButtonChoice1.FlatAppearance.BorderSize = 0
-                'ButtonChoice2.FlatStyle = FlatStyle.Standard
-                ButtonChoice2.FlatAppearance.BorderSize = 0
-                'ButtonChoice3.FlatStyle = FlatStyle.Standard
-                ButtonChoice3.FlatAppearance.BorderSize = 0
-                ButtonDefault = 1
-        End Select
+
+        Const NumberOfButtons As Integer = 3
+        Dim Buttons() As Button = {ButtonChoice1, ButtonChoice2, ButtonChoice3}
+
+        ' Clear all buttons to default state
+        For Each btn In Buttons
+            btn.FlatAppearance.BorderSize = 1
+        Next
+
+        ' Set active button based on ButtonNumber
+        If ButtonNumber >= 1 AndAlso ButtonNumber <= NumberOfButtons Then
+            Buttons(ButtonNumber - 1).FlatAppearance.BorderSize = 3 ' ButtonNumber is 1-based, array index is 0-based
+            ButtonDefault = ButtonNumber
+        Else
+            Buttons(0).FlatAppearance.BorderSize = 3 ' Default to first button if ButtonNumber is invalid
+            ButtonDefault = 1
+        End If
+
         Generate()
     End Sub
 
@@ -233,7 +183,6 @@ Public Class MessageMain
     Private Sub BtnExit_Click(sender As Object, e As EventArgs) Handles BtnExit.Click
         Application.Exit()
     End Sub
-
 
     Sub SetTooltips()
         ' Clear existing tooltips
@@ -264,7 +213,6 @@ Public Class MessageMain
             Exit Sub
         End If
 
-
         If Len(TxtVariable.Text) > 0 Then ' use as variable
             strResults = "Dim " & TxtVariable.Text & " As DialogResult = "
         End If
@@ -277,7 +225,6 @@ Public Class MessageMain
 
         strResults = strResults & " " & IconSelection & ","
 
-
         If ButtonDefault > 0 Then
             strResults &= "MessageBoxDefaultButton.Button" & ButtonDefault & ")"
         Else
@@ -289,21 +236,6 @@ Public Class MessageMain
     End Sub
 
     Shared Function ButtonConvert(Selection As Integer) As String
-        'Dim strReturn As String = String.Empty
-        'OK  0
-        'The Message box contains an OK button.
-
-        'OKCancel    1
-        'The Message box contains OK And Cancel buttons.
-
-        'RetryCancel 5
-        'The Message box contains Retry And Cancel buttons.
-
-        'YesNo   4
-        'The Message box contains Yes And No buttons.
-
-        'YesNoCancel 3
-        'The Message box contains Yes, No, And Cancel buttons.
 
         Select Case Selection
             Case 0
@@ -429,6 +361,7 @@ Public Class MessageMain
             dragging = False
         End If
     End Sub
+
 End Class
 
 Public Class Item
@@ -438,7 +371,6 @@ Public Class Item
 
     ' Constructor
     Public Sub New(name As String)
-        'Me.ID = Id
         Me.Name = name
     End Sub
 

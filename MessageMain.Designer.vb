@@ -153,6 +153,7 @@ Partial Class MessageMain
         ' 
         ' ButtonChoice1
         ' 
+        ButtonChoice1.FlatAppearance.BorderColor = Color.FromArgb(CByte(64), CByte(64), CByte(64))
         ButtonChoice1.FlatStyle = FlatStyle.Flat
         ButtonChoice1.Font = New Font("Microsoft Sans Serif", 12F)
         ButtonChoice1.ForeColor = Color.White
@@ -166,6 +167,7 @@ Partial Class MessageMain
         ' 
         ' ButtonChoice2
         ' 
+        ButtonChoice2.FlatAppearance.BorderColor = Color.FromArgb(CByte(64), CByte(64), CByte(64))
         ButtonChoice2.FlatStyle = FlatStyle.Flat
         ButtonChoice2.Font = New Font("Microsoft Sans Serif", 12F)
         ButtonChoice2.ForeColor = Color.White
@@ -179,6 +181,7 @@ Partial Class MessageMain
         ' 
         ' ButtonChoice3
         ' 
+        ButtonChoice3.FlatAppearance.BorderColor = Color.FromArgb(CByte(64), CByte(64), CByte(64))
         ButtonChoice3.FlatStyle = FlatStyle.Flat
         ButtonChoice3.Font = New Font("Microsoft Sans Serif", 12F)
         ButtonChoice3.ForeColor = Color.White
