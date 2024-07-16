@@ -16,11 +16,11 @@
     <RepositoryUrl>https://github.com/daddynino/MessageBoxCreator</RepositoryUrl>
     <RepositoryType>git</RepositoryType>
     <PackageReleaseNotes></PackageReleaseNotes>
-    <FileVersion>24.7.16.1</FileVersion>
-    <AssemblyVersion>24.7.16.1</AssemblyVersion>
+    <FileVersion>24.7.16.2</FileVersion>
+    <AssemblyVersion>24.7.16.2</AssemblyVersion>
     <OptionStrict>On</OptionStrict>
     <AnalysisLevel>latest-recommended</AnalysisLevel>
-    <Version>24.7.16.1</Version>
+    <Version>24.7.16.2</Version>
   </PropertyGroup>
 
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|AnyCPU'">
