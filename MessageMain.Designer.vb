@@ -199,7 +199,7 @@ Partial Class MessageMain
         RTBResult.Location = New Point(417, 207)
         RTBResult.Margin = New Padding(4)
         RTBResult.Name = "RTBResult"
-        RTBResult.Size = New Size(426, 285)
+        RTBResult.Size = New Size(419, 285)
         RTBResult.TabIndex = 8
         RTBResult.Text = ""
         ' 
@@ -208,7 +208,7 @@ Partial Class MessageMain
         LblResult.AutoSize = True
         LblResult.Font = New Font("Microsoft Sans Serif", 14.25F)
         LblResult.ForeColor = Color.White
-        LblResult.Location = New Point(563, 180)
+        LblResult.Location = New Point(417, 178)
         LblResult.Margin = New Padding(4, 0, 4, 0)
         LblResult.Name = "LblResult"
         LblResult.Size = New Size(113, 24)
@@ -217,7 +217,9 @@ Partial Class MessageMain
         ' 
         ' BtnCopy
         ' 
-        BtnCopy.BackColor = Color.Maroon
+        BtnCopy.BackColor = Color.FromArgb(CByte(136), CByte(48), CByte(0))
+        BtnCopy.FlatAppearance.BorderSize = 0
+        BtnCopy.FlatAppearance.MouseOverBackColor = Color.FromArgb(CByte(192), CByte(0), CByte(0))
         BtnCopy.FlatStyle = FlatStyle.Flat
         BtnCopy.ForeColor = Color.White
         BtnCopy.Location = New Point(583, 500)
@@ -251,7 +253,7 @@ Partial Class MessageMain
         ' 
         ' BtnAbout
         ' 
-        BtnAbout.BackColor = Color.Maroon
+        BtnAbout.BackColor = Color.FromArgb(CByte(136), CByte(48), CByte(0))
         BtnAbout.FlatAppearance.BorderSize = 0
         BtnAbout.FlatAppearance.MouseDownBackColor = Color.Maroon
         BtnAbout.FlatAppearance.MouseOverBackColor = Color.FromArgb(CByte(192), CByte(0), CByte(0))
@@ -268,13 +270,13 @@ Partial Class MessageMain
         ' 
         ' PanelTitleHeader
         ' 
-        PanelTitleHeader.BackColor = Color.Maroon
+        PanelTitleHeader.BackColor = Color.FromArgb(CByte(136), CByte(48), CByte(0))
         PanelTitleHeader.Controls.Add(LblXToClose)
         PanelTitleHeader.Controls.Add(LabelTitleHeader)
         PanelTitleHeader.Dock = DockStyle.Top
         PanelTitleHeader.Location = New Point(0, 0)
         PanelTitleHeader.Name = "PanelTitleHeader"
-        PanelTitleHeader.Size = New Size(853, 43)
+        PanelTitleHeader.Size = New Size(849, 43)
         PanelTitleHeader.TabIndex = 37
         ' 
         ' LblXToClose
@@ -282,7 +284,7 @@ Partial Class MessageMain
         LblXToClose.AutoSize = True
         LblXToClose.Font = New Font("Microsoft Sans Serif", 14.25F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
         LblXToClose.ForeColor = Color.White
-        LblXToClose.Location = New Point(827, 9)
+        LblXToClose.Location = New Point(819, 9)
         LblXToClose.Name = "LblXToClose"
         LblXToClose.Size = New Size(24, 24)
         LblXToClose.TabIndex = 1
@@ -301,7 +303,7 @@ Partial Class MessageMain
         ' 
         ' Panel1
         ' 
-        Panel1.BackColor = Color.Maroon
+        Panel1.BackColor = Color.FromArgb(CByte(136), CByte(48), CByte(0))
         Panel1.Dock = DockStyle.Left
         Panel1.Location = New Point(0, 43)
         Panel1.Name = "Panel1"
@@ -310,32 +312,31 @@ Partial Class MessageMain
         ' 
         ' Panel2
         ' 
-        Panel2.BackColor = Color.Maroon
+        Panel2.BackColor = Color.FromArgb(CByte(136), CByte(48), CByte(0))
         Panel2.Dock = DockStyle.Bottom
         Panel2.Location = New Point(3, 650)
         Panel2.Name = "Panel2"
-        Panel2.Size = New Size(850, 3)
+        Panel2.Size = New Size(846, 3)
         Panel2.TabIndex = 39
         ' 
         ' Panel3
         ' 
-        Panel3.BackColor = Color.Maroon
+        Panel3.BackColor = Color.FromArgb(CByte(136), CByte(48), CByte(0))
         Panel3.Dock = DockStyle.Right
-        Panel3.Location = New Point(850, 43)
+        Panel3.Location = New Point(846, 43)
         Panel3.Name = "Panel3"
         Panel3.Size = New Size(3, 607)
         Panel3.TabIndex = 39
         ' 
         ' BtnExit
         ' 
-        BtnExit.BackColor = Color.Maroon
+        BtnExit.BackColor = Color.FromArgb(CByte(136), CByte(48), CByte(0))
         BtnExit.FlatAppearance.BorderSize = 0
-        BtnExit.FlatAppearance.MouseDownBackColor = Color.Maroon
         BtnExit.FlatAppearance.MouseOverBackColor = Color.FromArgb(CByte(192), CByte(0), CByte(0))
         BtnExit.FlatStyle = FlatStyle.Flat
         BtnExit.Font = New Font("Segoe UI", 12F)
         BtnExit.ForeColor = Color.White
-        BtnExit.Location = New Point(766, 605)
+        BtnExit.Location = New Point(764, 605)
         BtnExit.Margin = New Padding(4)
         BtnExit.Name = "BtnExit"
         BtnExit.Size = New Size(72, 32)
@@ -345,15 +346,15 @@ Partial Class MessageMain
         ' 
         ' Panel4
         ' 
-        Panel4.BackColor = Color.FromArgb(CByte(128), CByte(64), CByte(64))
-        Panel4.Location = New Point(409, 166)
+        Panel4.BackColor = Color.FromArgb(CByte(136), CByte(48), CByte(0))
+        Panel4.Location = New Point(408, 178)
         Panel4.Name = "Panel4"
-        Panel4.Size = New Size(3, 475)
+        Panel4.Size = New Size(3, 459)
         Panel4.TabIndex = 40
         ' 
         ' Panel5
         ' 
-        Panel5.BackColor = Color.FromArgb(CByte(128), CByte(64), CByte(64))
+        Panel5.BackColor = Color.FromArgb(CByte(136), CByte(48), CByte(0))
         Panel5.Location = New Point(13, 163)
         Panel5.Name = "Panel5"
         Panel5.Size = New Size(823, 3)
@@ -365,7 +366,7 @@ Partial Class MessageMain
         AutoScaleMode = AutoScaleMode.Font
         BackColor = Color.FromArgb(CByte(22), CByte(24), CByte(32))
         BackgroundImageLayout = ImageLayout.None
-        ClientSize = New Size(853, 653)
+        ClientSize = New Size(849, 653)
         Controls.Add(Panel4)
         Controls.Add(Panel5)
         Controls.Add(Panel3)
