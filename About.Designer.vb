@@ -119,7 +119,7 @@ Partial Class About
         ' 
         ' Panel2
         ' 
-        Panel2.BackColor = Color.Maroon
+        Panel2.BackColor = Color.FromArgb(CByte(136), CByte(48), CByte(0))
         Panel2.Controls.Add(LblXToClose)
         Panel2.Controls.Add(LblTitle)
         Panel2.Dock = DockStyle.Top
@@ -153,7 +153,7 @@ Partial Class About
         ' 
         ' Panel1
         ' 
-        Panel1.BackColor = Color.Maroon
+        Panel1.BackColor = Color.FromArgb(CByte(136), CByte(48), CByte(0))
         Panel1.Location = New Point(194, 145)
         Panel1.Name = "Panel1"
         Panel1.Size = New Size(223, 5)
@@ -175,7 +175,7 @@ Partial Class About
         ' 
         ' Panel3
         ' 
-        Panel3.BackColor = Color.Maroon
+        Panel3.BackColor = Color.FromArgb(CByte(136), CByte(48), CByte(0))
         Panel3.Dock = DockStyle.Right
         Panel3.Location = New Point(455, 43)
         Panel3.Name = "Panel3"
@@ -184,7 +184,7 @@ Partial Class About
         ' 
         ' Panel4
         ' 
-        Panel4.BackColor = Color.Maroon
+        Panel4.BackColor = Color.FromArgb(CByte(136), CByte(48), CByte(0))
         Panel4.Dock = DockStyle.Left
         Panel4.Location = New Point(0, 43)
         Panel4.Name = "Panel4"
@@ -193,7 +193,7 @@ Partial Class About
         ' 
         ' Panel5
         ' 
-        Panel5.BackColor = Color.Maroon
+        Panel5.BackColor = Color.FromArgb(CByte(136), CByte(48), CByte(0))
         Panel5.Dock = DockStyle.Bottom
         Panel5.Location = New Point(3, 326)
         Panel5.Name = "Panel5"
