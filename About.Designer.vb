@@ -55,7 +55,7 @@ Partial Class About
         ' 
         ' TxtProductName
         ' 
-        TxtProductName.BackColor = Color.FromArgb(CByte(64), CByte(64), CByte(64))
+        TxtProductName.BackColor = Color.FromArgb(CByte(22), CByte(24), CByte(32))
         TxtProductName.BorderStyle = BorderStyle.None
         TxtProductName.Font = New Font("Segoe UI", 14.25F)
         TxtProductName.ForeColor = Color.White
@@ -71,7 +71,7 @@ Partial Class About
         ' 
         ' TxtVersion
         ' 
-        TxtVersion.BackColor = Color.FromArgb(CByte(64), CByte(64), CByte(64))
+        TxtVersion.BackColor = Color.FromArgb(CByte(22), CByte(24), CByte(32))
         TxtVersion.BorderStyle = BorderStyle.None
         TxtVersion.Font = New Font("Segoe UI", 14.25F)
         TxtVersion.ForeColor = Color.White
@@ -87,7 +87,7 @@ Partial Class About
         ' 
         ' TxtCopyright
         ' 
-        TxtCopyright.BackColor = Color.FromArgb(CByte(64), CByte(64), CByte(64))
+        TxtCopyright.BackColor = Color.FromArgb(CByte(22), CByte(24), CByte(32))
         TxtCopyright.BorderStyle = BorderStyle.None
         TxtCopyright.Font = New Font("Segoe UI", 14.25F)
         TxtCopyright.ForeColor = Color.White
@@ -103,7 +103,7 @@ Partial Class About
         ' 
         ' TextBoxDescription
         ' 
-        TextBoxDescription.BackColor = Color.FromArgb(CByte(64), CByte(64), CByte(64))
+        TextBoxDescription.BackColor = Color.FromArgb(CByte(22), CByte(24), CByte(32))
         TextBoxDescription.BorderStyle = BorderStyle.None
         TextBoxDescription.Font = New Font("Segoe UI", 14.25F)
         TextBoxDescription.ForeColor = Color.White
@@ -132,22 +132,22 @@ Partial Class About
         ' LblXToClose
         ' 
         LblXToClose.AutoSize = True
-        LblXToClose.Font = New Font("Century Gothic", 14.25F, FontStyle.Bold Or FontStyle.Italic)
+        LblXToClose.Font = New Font("Microsoft Sans Serif", 14.25F, FontStyle.Bold Or FontStyle.Italic)
         LblXToClose.ForeColor = Color.White
         LblXToClose.Location = New Point(430, 11)
         LblXToClose.Name = "LblXToClose"
-        LblXToClose.Size = New Size(23, 23)
+        LblXToClose.Size = New Size(25, 24)
         LblXToClose.TabIndex = 1
         LblXToClose.Text = "&X"
         ' 
         ' LblTitle
         ' 
         LblTitle.AutoSize = True
-        LblTitle.Font = New Font("Century Gothic", 14.25F)
+        LblTitle.Font = New Font("Microsoft Sans Serif", 14.25F)
         LblTitle.ForeColor = Color.White
         LblTitle.Location = New Point(11, 12)
         LblTitle.Name = "LblTitle"
-        LblTitle.Size = New Size(199, 22)
+        LblTitle.Size = New Size(186, 24)
         LblTitle.TabIndex = 0
         LblTitle.Text = "MessageBox Creator"
         ' 
@@ -163,7 +163,7 @@ Partial Class About
         ' 
         BtnExit.FlatAppearance.BorderSize = 0
         BtnExit.FlatStyle = FlatStyle.Flat
-        BtnExit.Font = New Font("Century Gothic", 14.25F)
+        BtnExit.Font = New Font("Microsoft Sans Serif", 14.25F)
         BtnExit.ForeColor = Color.White
         BtnExit.Location = New Point(373, 286)
         BtnExit.Margin = New Padding(4)
@@ -204,7 +204,7 @@ Partial Class About
         ' 
         AutoScaleDimensions = New SizeF(7F, 15F)
         AutoScaleMode = AutoScaleMode.Font
-        BackColor = Color.FromArgb(CByte(64), CByte(64), CByte(64))
+        BackColor = Color.FromArgb(CByte(22), CByte(24), CByte(32))
         BackgroundImageLayout = ImageLayout.Zoom
         ClientSize = New Size(458, 329)
         Controls.Add(Panel5)

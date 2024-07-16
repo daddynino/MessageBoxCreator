@@ -54,64 +54,64 @@ Partial Class MessageMain
         ' 
         ' TxtCaption
         ' 
-        TxtCaption.Font = New Font("Century Gothic", 14.25F)
+        TxtCaption.Font = New Font("Microsoft Sans Serif", 14.25F)
         TxtCaption.Location = New Point(13, 206)
         TxtCaption.Margin = New Padding(4)
         TxtCaption.Name = "TxtCaption"
-        TxtCaption.Size = New Size(389, 31)
+        TxtCaption.Size = New Size(389, 29)
         TxtCaption.TabIndex = 1
         ' 
         ' LblMsgText
         ' 
         LblMsgText.AutoSize = True
-        LblMsgText.Font = New Font("Century Gothic", 14.25F)
+        LblMsgText.Font = New Font("Microsoft Sans Serif", 14.25F)
         LblMsgText.ForeColor = Color.White
         LblMsgText.Location = New Point(13, 51)
         LblMsgText.Margin = New Padding(4, 0, 4, 0)
         LblMsgText.Name = "LblMsgText"
-        LblMsgText.Size = New Size(109, 22)
+        LblMsgText.Size = New Size(200, 24)
         LblMsgText.TabIndex = 10
-        LblMsgText.Text = "Dialog Text"
+        LblMsgText.Text = "Dialog Text (Required)"
         ' 
         ' LblCaption
         ' 
         LblCaption.AutoSize = True
-        LblCaption.Font = New Font("Century Gothic", 14.25F)
+        LblCaption.Font = New Font("Microsoft Sans Serif", 14.25F)
         LblCaption.ForeColor = Color.White
         LblCaption.Location = New Point(13, 180)
         LblCaption.Margin = New Padding(4, 0, 4, 0)
         LblCaption.Name = "LblCaption"
-        LblCaption.Size = New Size(85, 22)
+        LblCaption.Size = New Size(74, 24)
         LblCaption.TabIndex = 11
         LblCaption.Text = "Caption"
         ' 
         ' LblDefault
         ' 
         LblDefault.AutoSize = True
-        LblDefault.Font = New Font("Century Gothic", 14.25F)
+        LblDefault.Font = New Font("Microsoft Sans Serif", 14.25F)
         LblDefault.ForeColor = Color.White
         LblDefault.Location = New Point(13, 349)
         LblDefault.Margin = New Padding(4, 0, 4, 0)
         LblDefault.Name = "LblDefault"
-        LblDefault.Size = New Size(143, 22)
+        LblDefault.Size = New Size(125, 24)
         LblDefault.TabIndex = 13
         LblDefault.Text = "Default Button"
         ' 
         ' LblButtonType
         ' 
         LblButtonType.AutoSize = True
-        LblButtonType.Font = New Font("Century Gothic", 14.25F)
+        LblButtonType.Font = New Font("Microsoft Sans Serif", 14.25F)
         LblButtonType.ForeColor = Color.White
         LblButtonType.Location = New Point(13, 266)
         LblButtonType.Margin = New Padding(4, 0, 4, 0)
         LblButtonType.Name = "LblButtonType"
-        LblButtonType.Size = New Size(78, 22)
+        LblButtonType.Size = New Size(72, 24)
         LblButtonType.TabIndex = 15
         LblButtonType.Text = "Buttons"
         ' 
         ' RichTextBox1
         ' 
-        RichTextBox1.Font = New Font("Century Gothic", 14.25F)
+        RichTextBox1.Font = New Font("Microsoft Sans Serif", 14.25F)
         RichTextBox1.Location = New Point(13, 77)
         RichTextBox1.Margin = New Padding(4)
         RichTextBox1.Name = "RichTextBox1"
@@ -121,40 +121,40 @@ Partial Class MessageMain
         ' 
         ' CboButtons
         ' 
-        CboButtons.Font = New Font("Century Gothic", 14.25F)
+        CboButtons.Font = New Font("Microsoft Sans Serif", 14.25F)
         CboButtons.FormattingEnabled = True
         CboButtons.Location = New Point(13, 292)
         CboButtons.Margin = New Padding(4)
         CboButtons.Name = "CboButtons"
-        CboButtons.Size = New Size(389, 30)
+        CboButtons.Size = New Size(389, 32)
         CboButtons.TabIndex = 2
         ' 
         ' CboIconSelection
         ' 
-        CboIconSelection.Font = New Font("Century Gothic", 14.25F)
+        CboIconSelection.Font = New Font("Microsoft Sans Serif", 14.25F)
         CboIconSelection.FormattingEnabled = True
         CboIconSelection.Location = New Point(13, 460)
         CboIconSelection.Margin = New Padding(4)
         CboIconSelection.Name = "CboIconSelection"
-        CboIconSelection.Size = New Size(389, 30)
+        CboIconSelection.Size = New Size(389, 32)
         CboIconSelection.TabIndex = 6
         ' 
         ' LblIcon
         ' 
         LblIcon.AutoSize = True
-        LblIcon.Font = New Font("Century Gothic", 14.25F)
+        LblIcon.Font = New Font("Microsoft Sans Serif", 14.25F)
         LblIcon.ForeColor = Color.White
         LblIcon.Location = New Point(13, 434)
         LblIcon.Margin = New Padding(4, 0, 4, 0)
         LblIcon.Name = "LblIcon"
-        LblIcon.Size = New Size(51, 22)
+        LblIcon.Size = New Size(46, 24)
         LblIcon.TabIndex = 21
         LblIcon.Text = "Icon"
         ' 
         ' ButtonChoice1
         ' 
         ButtonChoice1.FlatStyle = FlatStyle.Flat
-        ButtonChoice1.Font = New Font("Century Gothic", 12F)
+        ButtonChoice1.Font = New Font("Microsoft Sans Serif", 12F)
         ButtonChoice1.ForeColor = Color.White
         ButtonChoice1.Location = New Point(13, 375)
         ButtonChoice1.Margin = New Padding(4)
@@ -167,7 +167,7 @@ Partial Class MessageMain
         ' ButtonChoice2
         ' 
         ButtonChoice2.FlatStyle = FlatStyle.Flat
-        ButtonChoice2.Font = New Font("Century Gothic", 12F)
+        ButtonChoice2.Font = New Font("Microsoft Sans Serif", 12F)
         ButtonChoice2.ForeColor = Color.White
         ButtonChoice2.Location = New Point(143, 375)
         ButtonChoice2.Margin = New Padding(4)
@@ -180,7 +180,7 @@ Partial Class MessageMain
         ' ButtonChoice3
         ' 
         ButtonChoice3.FlatStyle = FlatStyle.Flat
-        ButtonChoice3.Font = New Font("Century Gothic", 12F)
+        ButtonChoice3.Font = New Font("Microsoft Sans Serif", 12F)
         ButtonChoice3.ForeColor = Color.White
         ButtonChoice3.Location = New Point(273, 375)
         ButtonChoice3.Margin = New Padding(4)
@@ -192,7 +192,7 @@ Partial Class MessageMain
         ' 
         ' RTBResult
         ' 
-        RTBResult.Font = New Font("Century Gothic", 14.25F)
+        RTBResult.Font = New Font("Microsoft Sans Serif", 14.25F)
         RTBResult.Location = New Point(417, 207)
         RTBResult.Margin = New Padding(4)
         RTBResult.Name = "RTBResult"
@@ -203,44 +203,47 @@ Partial Class MessageMain
         ' LblResult
         ' 
         LblResult.AutoSize = True
-        LblResult.Font = New Font("Century Gothic", 14.25F)
+        LblResult.Font = New Font("Microsoft Sans Serif", 14.25F)
         LblResult.ForeColor = Color.White
         LblResult.Location = New Point(563, 180)
         LblResult.Margin = New Padding(4, 0, 4, 0)
         LblResult.Name = "LblResult"
-        LblResult.Size = New Size(120, 22)
+        LblResult.Size = New Size(113, 24)
         LblResult.TabIndex = 31
         LblResult.Text = "Code Result"
         ' 
         ' BtnCopy
         ' 
+        BtnCopy.BackColor = Color.Maroon
+        BtnCopy.FlatStyle = FlatStyle.Flat
+        BtnCopy.ForeColor = Color.White
         BtnCopy.Location = New Point(583, 500)
         BtnCopy.Margin = New Padding(4)
         BtnCopy.Name = "BtnCopy"
         BtnCopy.Size = New Size(100, 32)
         BtnCopy.TabIndex = 9
         BtnCopy.Text = "Copy &Text"
-        BtnCopy.UseVisualStyleBackColor = True
+        BtnCopy.UseVisualStyleBackColor = False
         ' 
         ' Label1
         ' 
         Label1.AutoSize = True
-        Label1.Font = New Font("Century Gothic", 14.25F)
+        Label1.Font = New Font("Microsoft Sans Serif", 14.25F)
         Label1.ForeColor = Color.White
         Label1.Location = New Point(12, 517)
         Label1.Margin = New Padding(4, 0, 4, 0)
         Label1.Name = "Label1"
-        Label1.Size = New Size(248, 22)
+        Label1.Size = New Size(222, 24)
         Label1.TabIndex = 34
         Label1.Text = "Variable Name (Optional)"
         ' 
         ' TxtVariable
         ' 
-        TxtVariable.Font = New Font("Century Gothic", 14.25F)
+        TxtVariable.Font = New Font("Microsoft Sans Serif", 14.25F)
         TxtVariable.Location = New Point(12, 543)
         TxtVariable.Margin = New Padding(4)
         TxtVariable.Name = "TxtVariable"
-        TxtVariable.Size = New Size(389, 31)
+        TxtVariable.Size = New Size(389, 29)
         TxtVariable.TabIndex = 7
         ' 
         ' BtnAbout
@@ -250,7 +253,7 @@ Partial Class MessageMain
         BtnAbout.FlatAppearance.MouseDownBackColor = Color.Maroon
         BtnAbout.FlatAppearance.MouseOverBackColor = Color.FromArgb(CByte(192), CByte(0), CByte(0))
         BtnAbout.FlatStyle = FlatStyle.Flat
-        BtnAbout.Font = New Font("Century Gothic", 14.25F)
+        BtnAbout.Font = New Font("Segoe UI", 12F)
         BtnAbout.ForeColor = Color.White
         BtnAbout.Location = New Point(13, 605)
         BtnAbout.Margin = New Padding(0)
@@ -274,22 +277,22 @@ Partial Class MessageMain
         ' LblXToClose
         ' 
         LblXToClose.AutoSize = True
-        LblXToClose.Font = New Font("Century Gothic", 14.25F, FontStyle.Italic, GraphicsUnit.Point, CByte(0))
+        LblXToClose.Font = New Font("Microsoft Sans Serif", 14.25F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
         LblXToClose.ForeColor = Color.White
         LblXToClose.Location = New Point(827, 9)
         LblXToClose.Name = "LblXToClose"
-        LblXToClose.Size = New Size(22, 22)
+        LblXToClose.Size = New Size(24, 24)
         LblXToClose.TabIndex = 1
         LblXToClose.Text = "X"
         ' 
         ' LabelTitleHeader
         ' 
         LabelTitleHeader.AutoSize = True
-        LabelTitleHeader.Font = New Font("Century Gothic", 14.25F)
+        LabelTitleHeader.Font = New Font("Microsoft Sans Serif", 14.25F)
         LabelTitleHeader.ForeColor = Color.White
         LabelTitleHeader.Location = New Point(12, 9)
         LabelTitleHeader.Name = "LabelTitleHeader"
-        LabelTitleHeader.Size = New Size(199, 22)
+        LabelTitleHeader.Size = New Size(186, 24)
         LabelTitleHeader.TabIndex = 0
         LabelTitleHeader.Text = "MessageBox Creator"
         ' 
@@ -327,7 +330,7 @@ Partial Class MessageMain
         BtnExit.FlatAppearance.MouseDownBackColor = Color.Maroon
         BtnExit.FlatAppearance.MouseOverBackColor = Color.FromArgb(CByte(192), CByte(0), CByte(0))
         BtnExit.FlatStyle = FlatStyle.Flat
-        BtnExit.Font = New Font("Century Gothic", 14.25F)
+        BtnExit.Font = New Font("Segoe UI", 12F)
         BtnExit.ForeColor = Color.White
         BtnExit.Location = New Point(766, 605)
         BtnExit.Margin = New Padding(4)
@@ -357,7 +360,7 @@ Partial Class MessageMain
         ' 
         AutoScaleDimensions = New SizeF(9F, 21F)
         AutoScaleMode = AutoScaleMode.Font
-        BackColor = Color.FromArgb(CByte(64), CByte(64), CByte(64))
+        BackColor = Color.FromArgb(CByte(22), CByte(24), CByte(32))
         BackgroundImageLayout = ImageLayout.None
         ClientSize = New Size(853, 653)
         Controls.Add(Panel4)
