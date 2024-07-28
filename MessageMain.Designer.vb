@@ -22,6 +22,7 @@ Partial Class MessageMain
     'Do not modify it using the code editor.
     <System.Diagnostics.DebuggerStepThrough()>
     Private Sub InitializeComponent()
+        Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(MessageMain))
         TxtCaption = New TextBox()
         LblMsgText = New Label()
         LblCaption = New Label()
@@ -394,6 +395,7 @@ Partial Class MessageMain
         Controls.Add(TxtCaption)
         Font = New Font("Segoe UI", 12F)
         FormBorderStyle = FormBorderStyle.None
+        Icon = CType(resources.GetObject("$this.Icon"), Icon)
         Margin = New Padding(4)
         MaximizeBox = False
         Name = "MessageMain"

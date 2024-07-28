@@ -3,24 +3,28 @@
   <PropertyGroup>
     <OutputType>WinExe</OutputType>
     <TargetFramework>net8.0-windows</TargetFramework>
-    <StartupObject>Sub Main</StartupObject>
+    <StartupObject>MessageBoxCreator.My.MyApplication</StartupObject>
     <UseWindowsForms>true</UseWindowsForms>
     <MyType>WindowsForms</MyType>
     <Title>Message Box Creator</Title>
     <Authors>Neil Saunders</Authors>
     <Company />
     <Product>Message Box Creator</Product>
-    <Description>Simple GUI to input messagebox options and output related code</Description>
+    <Description>Simple GUI to input messagebox options and output related code.
+
+Credit to https://www.freepik.com/ for the icon.</Description>
     <Copyright>© 2024 Neil Saunders</Copyright>
     <PackageProjectUrl>https://github.com/daddynino/MessageBoxCreator</PackageProjectUrl>
     <RepositoryUrl>https://github.com/daddynino/MessageBoxCreator</RepositoryUrl>
     <RepositoryType>git</RepositoryType>
     <PackageReleaseNotes></PackageReleaseNotes>
-    <FileVersion>24.7.16.2</FileVersion>
-    <AssemblyVersion>24.7.16.2</AssemblyVersion>
+    <FileVersion>24.7.16.3</FileVersion>
+    <AssemblyVersion>24.7.16.3</AssemblyVersion>
     <OptionStrict>On</OptionStrict>
     <AnalysisLevel>latest-recommended</AnalysisLevel>
-    <Version>24.7.16.2</Version>
+    <Version>24.7.16.3</Version>
+    <ApplicationIcon>21_h62_icon.ico</ApplicationIcon>
+    <PackageIcon>21.jpg</PackageIcon>
   </PropertyGroup>
 
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|AnyCPU'">
@@ -42,6 +46,10 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <Content Include="21_h62_icon.ico" />
+  </ItemGroup>
+
+  <ItemGroup>
     <Import Include="System.Data" />
     <Import Include="System.Drawing" />
     <Import Include="System.Windows.Forms" />
@@ -56,6 +64,10 @@
   </ItemGroup>
 
   <ItemGroup>
+    <None Update="21.jpg">
+      <Pack>True</Pack>
+      <PackagePath>\</PackagePath>
+    </None>
     <None Update="My Project\Application.myapp">
       <Generator>MyApplicationCodeGenerator</Generator>
       <LastGenOutput>Application.Designer.vb</LastGenOutput>

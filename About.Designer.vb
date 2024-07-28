@@ -219,6 +219,7 @@ Partial Class About
         Controls.Add(LogoPictureBox)
         Controls.Add(Panel2)
         FormBorderStyle = FormBorderStyle.None
+        Icon = CType(resources.GetObject("$this.Icon"), Icon)
         Margin = New Padding(4, 3, 4, 3)
         MaximizeBox = False
         MinimizeBox = False
