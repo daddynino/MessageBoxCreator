@@ -1,13 +1,13 @@
 ﻿Imports System.Globalization
 
 Public Class MessageMain
-    Dim ButtonSelection As String
-    Dim ButtonDefault As Integer
-    Dim IconSelection As String
-    Dim OptionSelection As String
+    Private ButtonSelection As String
+    Private ButtonDefault As Integer
+    Private IconSelection As String
+    Private OptionSelection As String
 
-    Dim dragging As Boolean
-    Dim startPoint As Point
+    Private dragging As Boolean
+    Private startPoint As Point
 
     Private tooltips As New ToolTip()
 
@@ -18,7 +18,7 @@ Public Class MessageMain
         LockItems(Not String.IsNullOrWhiteSpace(RichTextBox1.Text))
     End Sub
 
-    Sub LoadButtons()
+    Private Sub LoadButtons()
         ' Create a list of Item objects
         Dim items As New List(Of Item) From {
             New Item("Abort, Retry, Ignore"),
@@ -37,7 +37,7 @@ Public Class MessageMain
         ButtonSelection = "MessageBoxButtons.Ok"
     End Sub
 
-    Sub LoadIcons()
+    Private Sub LoadIcons()
         ' Create a list of Item objects
         Dim items As New List(Of Item) From {
             New Item("Asterisk"),
@@ -146,7 +146,7 @@ Public Class MessageMain
         Generate()
     End Sub
 
-    Sub ChangeActiveButton(ButtonNumber As Integer)
+    Private Sub ChangeActiveButton(ButtonNumber As Integer)
 
         Const NumberOfButtons As Integer = 3
         Dim Buttons() As Button = {ButtonChoice1, ButtonChoice2, ButtonChoice3}
@@ -184,7 +184,7 @@ Public Class MessageMain
         Application.Exit()
     End Sub
 
-    Sub SetTooltips()
+    Private Sub SetTooltips()
         ' Clear existing tooltips
         tooltips.RemoveAll()
 
@@ -205,7 +205,7 @@ Public Class MessageMain
         Generate()
     End Sub
 
-    Sub Generate()
+    Private Sub Generate()
         Dim strResults As String = String.Empty
         RTBResult.Text = String.Empty
         If String.IsNullOrWhiteSpace(RichTextBox1.Text) Then
@@ -235,7 +235,7 @@ Public Class MessageMain
 
     End Sub
 
-    Shared Function ButtonConvert(Selection As Integer) As String
+    Private Function ButtonConvert(Selection As Integer) As String
 
         Select Case Selection
             Case 0

@@ -1,12 +1,12 @@
 ﻿Imports System.Globalization
 Public NotInheritable Class About
 
-    Dim dragging As Boolean
-    Dim startPoint As Point
+    Private dragging As Boolean
+    Private startPoint As Point
 
-    Const AppTitle = "MessageBox Creator"
-    Const Description = "Simple GUI to input messagebox options and output related code"
-    Private Sub About_Load(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles MyBase.Load
+    Private Const AppTitle = "MessageBox Creator"
+    Private Const Description = "Simple GUI to input messagebox options and output related code"
+    Private Sub About_Load(sender As System.Object, e As System.EventArgs) Handles MyBase.Load
         ' Set the title of the form.
         Me.Text = String.Format(CultureInfo.InvariantCulture, "About {0}", AppTitle)
         Me.LblTitle.Text = AppTitle
@@ -16,7 +16,7 @@ Public NotInheritable Class About
         Me.TextBoxDescription.Text = "What it does..." & vbCrLf & vbCrLf & Description
     End Sub
 
-    Private Sub OKButton_Click(ByVal sender As Object, ByVal e As EventArgs)
+    Private Sub OKButton_Click(sender As Object, e As EventArgs)
         Close()
     End Sub
 
